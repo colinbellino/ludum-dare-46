@@ -54,5 +54,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.unity.2d.tilemap.extras": {
+      "revision": "HEAD",
+      "hash": "e9955e7528762a4ba6cd0471215e2c2135436ebe"
+    },
+    "io.tinu.asepriteimporter": {
+      "revision": "HEAD",
+      "hash": "4dc05210566995f9ee32222c9ce77a1bb2051c72"
+    }
   }
 }
