@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace GameJam.Core
 {
-	public class BoardManager : SerializedMonoBehaviour
+	public class BoardManager : MonoBehaviour
 	{
 		// Authoring
 		[SerializeField]
@@ -18,31 +18,31 @@ namespace GameJam.Core
 			{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(0, 3), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(0, 4), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(0, 4), new CellAuthoring { Content = 0, Type = 0 } },
 			{ new Vector2Int(1, 0), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(1, 1), new CellAuthoring { Content = -1, Type = 1 } },
 			{ new Vector2Int(1, 2), new CellAuthoring { Content = -1, Type = 1 } },
 			{ new Vector2Int(1, 3), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(1, 4), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(1, 4), new CellAuthoring { Content = 0, Type = 0 } },
 			{ new Vector2Int(2, 0), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(2, 1), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(2, 2), new CellAuthoring { Content = -1, Type = 1 } },
+			{ new Vector2Int(2, 2), new CellAuthoring { Content = 0, Type = 1 } },
 			{ new Vector2Int(2, 3), new CellAuthoring { Content = -1, Type = 1 } },
 			{ new Vector2Int(2, 4), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(3, 0), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(3, 1), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(3, 2), new CellAuthoring { Content = -1, Type = 1 } },
+			{ new Vector2Int(3, 2), new CellAuthoring { Content = 0, Type = 1 } },
 			{ new Vector2Int(3, 3), new CellAuthoring { Content = -1, Type = 1 } },
 			{ new Vector2Int(3, 4), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(4, 0), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(4, 1), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 2), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 3), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(4, 2), new CellAuthoring { Content = 0, Type = 0 } },
+			{ new Vector2Int(4, 3), new CellAuthoring { Content = 0, Type = 0 } },
 			{ new Vector2Int(4, 4), new CellAuthoring { Content = 1, Type = 0 } },
 		};
 
 		// Runtime
-		private Dictionary<Vector2Int, Cell> _board = new Dictionary<Vector2Int, Cell>();
+		public Dictionary<Vector2Int, Cell> Board { get; } = new Dictionary<Vector2Int, Cell>();
 		private EventSystem _eventSystem;
 		private Cell _highlightedCell;
 
@@ -72,7 +72,7 @@ namespace GameJam.Core
 			foreach (var cell in _level)
 			{
 				var position = cell.Key;
-				_board.Add(position, SpawnCell(position, cell.Value));
+				Board.Add(position, SpawnCell(position, cell.Value));
 			}
 		}
 
@@ -85,7 +85,7 @@ namespace GameJam.Core
 			instance.name = $"Cell [{position.x},{position.y}]";
 
 			var cell = instance.GetComponent<Cell>();
-			cell.Initialize(authoringData);
+			cell.Initialize(position, authoringData);
 
 			return cell;
 		}

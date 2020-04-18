@@ -12,7 +12,7 @@ namespace GameJam.Core
 		{
 			GUIStyle style = new GUIStyle();
 			style.normal.textColor = Color.white;
-			Handles.Label(cell.transform.position, $"[{cell.transform.position.x},{cell.transform.position.y}]", style);
+			Handles.Label(cell.transform.position, $"[{cell.Position.x},{cell.Position.y}]", style);
 		}
 	}
 }

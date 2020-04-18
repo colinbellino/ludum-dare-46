@@ -19,6 +19,18 @@ namespace GameJam.Core
 		{
 			Fire = fireLevel;
 
+			UpdateFireRender();
+		}
+
+		public void AddFire(int amount)
+		{
+			Fire += amount;
+
+			UpdateFireRender();
+		}
+
+		private void UpdateFireRender()
+		{
 			if (Fire > 0)
 			{
 				_fireRenderer.sprite = Resources.Load<Sprite>($"Art/Sprites/Fire");

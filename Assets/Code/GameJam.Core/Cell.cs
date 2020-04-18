@@ -8,8 +8,9 @@ namespace GameJam.Core
 		[SerializeField] [Required] private SpriteRenderer _renderer;
 
 		public Structure Content { get; private set; }
+		public Vector2Int Position { get; private set; }
 
-		public void Initialize(CellAuthoring data)
+		public void Initialize(Vector2Int position, CellAuthoring data)
 		{
 			if (data.Content > -1)
 			{
@@ -18,6 +19,7 @@ namespace GameJam.Core
 			}
 
 			_renderer.sprite = Resources.Load<Sprite>($"Art/Sprites/CellType{data.Type}");
+			Position = position;
 		}
 
 		public void SetContent(int contentId)
@@ -45,6 +47,11 @@ namespace GameJam.Core
 			content.Initialize(contentId);
 
 			return content;
+		}
+
+		public override string ToString()
+		{
+			return $"Cell [{Position.x},{Position.y}]";
 		}
 	}
 }
