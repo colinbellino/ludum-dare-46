@@ -16,32 +16,32 @@ namespace GameJam.Core
 		private void Awake()
 		{
 			// Load level data
-			var level = new Dictionary<Vector2Int, CellAuthoring> {
-				{ new Vector2Int(0, 0), new CellAuthoring { Content = 0, Type = 0, Fire = 1 } },
-				{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(0, 3), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(0, 4), new CellAuthoring { Content = 0, Type = 0 } },
-				{ new Vector2Int(1, 0), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(1, 1), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(1, 2), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(1, 3), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(1, 4), new CellAuthoring { Content = 0, Type = 0 } },
-				{ new Vector2Int(2, 0), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(2, 1), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(2, 2), new CellAuthoring { Content = 0, Type = 1 } },
-				{ new Vector2Int(2, 3), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(2, 4), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(3, 0), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(3, 1), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(3, 2), new CellAuthoring { Content = 0, Type = 1 } },
-				{ new Vector2Int(3, 3), new CellAuthoring { Content = -1, Type = 1 } },
-				{ new Vector2Int(3, 4), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(4, 0), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(4, 1), new CellAuthoring { Content = -1, Type = 0 } },
-				{ new Vector2Int(4, 2), new CellAuthoring { Content = 0, Type = 0 } },
-				{ new Vector2Int(4, 3), new CellAuthoring { Content = 0, Type = 0 } },
-				{ new Vector2Int(4, 4), new CellAuthoring { Content = 1, Type = 0 } },
+			var level = new Dictionary<Vector2Int, CellData> {
+				{ new Vector2Int(0, 0), new CellData { Content = 0, Type = 0, Fire = 1 } },
+				{ new Vector2Int(0, 1), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 2), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 3), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 4), new CellData { Content = 0, Type = 0 } },
+				{ new Vector2Int(1, 0), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(1, 1), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 2), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 3), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 4), new CellData { Content = 0, Type = 0 } },
+				{ new Vector2Int(2, 0), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(2, 1), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(2, 2), new CellData { Content = 0, Type = 1 } },
+				{ new Vector2Int(2, 3), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(2, 4), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(3, 0), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(3, 1), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(3, 2), new CellData { Content = 0, Type = 1 } },
+				{ new Vector2Int(3, 3), new CellData { Content = -1, Type = 1 } },
+				{ new Vector2Int(3, 4), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 0), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 1), new CellData { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 2), new CellData { Content = 0, Type = 0 } },
+				{ new Vector2Int(4, 3), new CellData { Content = 0, Type = 0 } },
+				{ new Vector2Int(4, 4), new CellData { Content = 1, Type = 0 } },
 			};
 
 			GenerateBoard(level);
@@ -69,7 +69,7 @@ namespace GameJam.Core
 			}
 		}
 
-		private void GenerateBoard(Dictionary<Vector2Int, CellAuthoring> level)
+		private void GenerateBoard(Dictionary<Vector2Int, CellData> level)
 		{
 			foreach (var cell in level)
 			{
@@ -78,7 +78,7 @@ namespace GameJam.Core
 			}
 		}
 
-		private Cell GenerateCell(Vector2Int position, CellAuthoring authoringData)
+		private Cell GenerateCell(Vector2Int position, CellData authoringData)
 		{
 			var prefab = Resources.Load<GameObject>("Prefabs/Cell");
 			var worldPosition = new Vector3(position.y, position.x, 0f);

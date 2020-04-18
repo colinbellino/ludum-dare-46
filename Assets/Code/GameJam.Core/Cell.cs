@@ -10,7 +10,7 @@ namespace GameJam.Core
 		public Structure Content { get; private set; }
 		public Vector2Int Position { get; private set; }
 
-		public void Initialize(Vector2Int position, CellAuthoring data)
+		public void Initialize(Vector2Int position, CellData data)
 		{
 			if (data.Content > -1)
 			{

@@ -1,6 +1,6 @@
 namespace GameJam.Core
 {
-	public class CellAuthoring
+	public class CellData
 	{
 		public int Content;
 		public int Type;
