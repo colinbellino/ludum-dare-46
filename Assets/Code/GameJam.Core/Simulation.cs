@@ -69,6 +69,12 @@ namespace GameJam.Core
 
 			cell.Content.AddFire(1);
 			_processedCells.Add(cell);
+
+			var limit = 2; // Get this from content data
+			if (cell.Content.Fire > limit)
+			{
+				cell.SetContent(-1);
+			}
 		}
 	}
 }
