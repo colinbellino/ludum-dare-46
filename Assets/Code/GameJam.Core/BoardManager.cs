@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -8,55 +7,58 @@ namespace GameJam.Core
 {
 	public class BoardManager : MonoBehaviour
 	{
-		// Authoring
-		[SerializeField]
-		[Required]
-		private Camera _camera;
-
-		private Dictionary<Vector2Int, CellAuthoring> _level = new Dictionary<Vector2Int, CellAuthoring> {
-			{ new Vector2Int(0, 0), new CellAuthoring { Content = 0, Type = 0, Fire = 1 } },
-			{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(0, 3), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(0, 4), new CellAuthoring { Content = 0, Type = 0 } },
-			{ new Vector2Int(1, 0), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(1, 1), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(1, 2), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(1, 3), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(1, 4), new CellAuthoring { Content = 0, Type = 0 } },
-			{ new Vector2Int(2, 0), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(2, 1), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(2, 2), new CellAuthoring { Content = 0, Type = 1 } },
-			{ new Vector2Int(2, 3), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(2, 4), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(3, 0), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(3, 1), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(3, 2), new CellAuthoring { Content = 0, Type = 1 } },
-			{ new Vector2Int(3, 3), new CellAuthoring { Content = -1, Type = 1 } },
-			{ new Vector2Int(3, 4), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 0), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 1), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 2), new CellAuthoring { Content = 0, Type = 0 } },
-			{ new Vector2Int(4, 3), new CellAuthoring { Content = 0, Type = 0 } },
-			{ new Vector2Int(4, 4), new CellAuthoring { Content = 1, Type = 0 } },
-		};
-
 		// Runtime
 		public Dictionary<Vector2Int, Cell> Board { get; } = new Dictionary<Vector2Int, Cell>();
 		private EventSystem _eventSystem;
+		private Camera _camera;
 		private Cell _highlightedCell;
 
 		private void Awake()
 		{
-			PrepareBoard();
+			// Load level data
+			var level = new Dictionary<Vector2Int, CellAuthoring> {
+				{ new Vector2Int(0, 0), new CellAuthoring { Content = 0, Type = 0, Fire = 1 } },
+				{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 3), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(0, 4), new CellAuthoring { Content = 0, Type = 0 } },
+				{ new Vector2Int(1, 0), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(1, 1), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 2), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 3), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(1, 4), new CellAuthoring { Content = 0, Type = 0 } },
+				{ new Vector2Int(2, 0), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(2, 1), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(2, 2), new CellAuthoring { Content = 0, Type = 1 } },
+				{ new Vector2Int(2, 3), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(2, 4), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(3, 0), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(3, 1), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(3, 2), new CellAuthoring { Content = 0, Type = 1 } },
+				{ new Vector2Int(3, 3), new CellAuthoring { Content = -1, Type = 1 } },
+				{ new Vector2Int(3, 4), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 0), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 1), new CellAuthoring { Content = -1, Type = 0 } },
+				{ new Vector2Int(4, 2), new CellAuthoring { Content = 0, Type = 0 } },
+				{ new Vector2Int(4, 3), new CellAuthoring { Content = 0, Type = 0 } },
+				{ new Vector2Int(4, 4), new CellAuthoring { Content = 1, Type = 0 } },
+			};
+
+			GenerateBoard(level);
 
 			_eventSystem = EventSystem.current;
+			_camera = Camera.main;
 		}
 
 		private void Update()
 		{
 			_highlightedCell = GetCellUnderMouseCursor();
 
+			HandleInputs();
+		}
+
+		private void HandleInputs()
+		{
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 			{
 				if (_highlightedCell)
@@ -67,16 +69,16 @@ namespace GameJam.Core
 			}
 		}
 
-		private void PrepareBoard()
+		private void GenerateBoard(Dictionary<Vector2Int, CellAuthoring> level)
 		{
-			foreach (var cell in _level)
+			foreach (var cell in level)
 			{
 				var position = cell.Key;
-				Board.Add(position, SpawnCell(position, cell.Value));
+				Board.Add(position, GenerateCell(position, cell.Value));
 			}
 		}
 
-		private Cell SpawnCell(Vector2Int position, CellAuthoring authoringData)
+		private Cell GenerateCell(Vector2Int position, CellAuthoring authoringData)
 		{
 			var prefab = Resources.Load<GameObject>("Prefabs/Cell");
 			var worldPosition = new Vector3(position.y, position.x, 0f);
@@ -107,12 +109,5 @@ namespace GameJam.Core
 
 			return hit.transform.GetComponent<Cell>();
 		}
-	}
-
-	public class CellAuthoring
-	{
-		public int Content;
-		public int Type;
-		public int Fire;
 	}
 }
