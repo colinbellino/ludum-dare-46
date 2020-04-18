@@ -8,11 +8,14 @@ namespace GameJam.Core
 		[SerializeField] [Required] private SpriteRenderer _renderer;
 
 		public CellContent Content { get; private set; }
-		public Sprite Sprite { get; private set; }
 
 		public void Initialize(CellAuthoring authoringData)
 		{
-			Content = SpawnContent(authoringData.Content);
+			if (authoringData.Content > 0)
+			{
+				Content = SpawnContent(authoringData.Content);
+			}
+
 			_renderer.sprite = Resources.Load<Sprite>($"Art/Sprites/CellType{authoringData.Type}");
 		}
 
@@ -20,7 +23,7 @@ namespace GameJam.Core
 		{
 			if (Content)
 			{
-				DestroyImmediate(Content);
+				Destroy(Content.gameObject);
 			}
 
 			Content = SpawnContent(contentId);
@@ -31,7 +34,8 @@ namespace GameJam.Core
 			var prefab = Resources.Load<GameObject>("Prefabs/CellContent");
 
 			var instance = Instantiate(prefab, transform);
-			instance.transform.parent = transform;
+			instance.name = $"Content ({contentId})";
+
 			var content = instance.GetComponent<CellContent>();
 			content.Initialize(contentId);
 
