@@ -12,13 +12,13 @@ namespace GameJam.Core
 
 		public void Initialize(Vector2Int position, CellData data)
 		{
-			if (data.Content > -1)
+			if (data.Content != null)
 			{
-				Content = SpawnContent(data.Content);
+				Content = SpawnContent((int)data.Content);
 				Content.SetFire(data.Fire);
 			}
 
-			_renderer.sprite = Resources.Load<Sprite>($"Art/Sprites/CellType{data.Type}");
+			_renderer.sprite = Resources.Load<Sprite>($"Art/Sprites/CellType{data.Terrain}");
 			Position = position;
 		}
 

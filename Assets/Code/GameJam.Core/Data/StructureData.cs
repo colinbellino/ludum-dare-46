@@ -2,10 +2,12 @@ using UnityEngine;
 
 namespace GameJam.Core
 {
-	public class StructureData
+	[CreateAssetMenu(fileName = "Structure", menuName = "GameJam/Structure")]
+	public class StructureData : ScriptableObject
 	{
-		public string Id;
+		public int Id;
 		public string Name;
+		public Sprite Sprite;
 		// public GameObject Model;
 	}
 }

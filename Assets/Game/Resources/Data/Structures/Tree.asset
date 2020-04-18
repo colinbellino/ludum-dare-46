@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17012bd6ad0508479ab595ff1e10005, type: 3}
-  m_Name: GameSettings
+  m_Script: {fileID: 11500000, guid: 7e57d58e27196d74da89afc73534c750, type: 3}
+  m_Name: Tree
   m_EditorClassIdentifier: 
-  AllLevels: []
+  Id: 0
+  Name: 
+  Sprite: {fileID: 0}

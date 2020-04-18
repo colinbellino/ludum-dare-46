@@ -1,9 +1,12 @@
+using System;
+
 namespace GameJam.Core
 {
+	[Serializable]
 	public class CellData
 	{
-		public int Content;
-		public int Type;
+		public int? Terrain;
+		public int? Content;
 		public int Fire;
 	}
 }

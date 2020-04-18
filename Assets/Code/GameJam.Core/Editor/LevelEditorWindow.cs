@@ -13,6 +13,9 @@ namespace GameJam.Core
 {
 	public class LevelEditorWindow : OdinMenuEditorWindow
 	{
+		private static Terrain[] _terrains;
+		private static StructureData[] _structures;
+
 		[MenuItem("Tools/GameJam/LevelEditor")]
 		private static void OpenWindow()
 		{
@@ -32,7 +35,7 @@ namespace GameJam.Core
 			// tree.Add("Characters", new CharacterTable(GameSettings.Instance.AllCharacters));
 
 			// Adds all characters.
-			tree.AddAllAssetsAtPath("Levels", "Assets/Game/Data/Levels", typeof(Level), true, true);
+			tree.AddAllAssetsAtPath("Levels", "Assets/Game/Resources/Data/Levels", typeof(Level), true, true);
 
 			// Add drag handles to items, so they can be easily dragged into the inventory if characters etc...
 			// tree.EnumerateTree().Where(x => x.Value as Item).ForEach(AddDragHandles);
