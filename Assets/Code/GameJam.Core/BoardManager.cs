@@ -54,7 +54,7 @@ namespace GameJam.Core
 			}
 		}
 
-		private Cell GenerateCell(Vector2Int position, CellAuthoring authoringData)
+		private Cell GenerateCell(Vector2Int position, CellData authoringData)
 		{
 			var prefab = Resources.Load<GameObject>("Prefabs/Cell");
 			var worldPosition = new Vector3(position.y, position.x, 0f);
