@@ -1,65 +1,63 @@
-using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace GameJam.Core
 {
-	public class BoardManager : MonoBehaviour
+	public class BoardManager : SerializedMonoBehaviour
 	{
-		[SerializeField] [AssetsOnly] [Required] private GameObject[] _cellPrefabs;
+		// Authoring
+		private Dictionary<Vector2Int, CellAuthoring> _level = new Dictionary<Vector2Int, CellAuthoring> {
+			{ new Vector2Int(0, 0), new CellAuthoring { Content = -1, Type = 1 } },
+			{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 1 } },
+			{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 1 } },
+			{ new Vector2Int(1, 0), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(1, 1), new CellAuthoring { Content = 0, Type = 0 } },
+			{ new Vector2Int(1, 2), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(2, 0), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(2, 1), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(2, 2), new CellAuthoring { Content = -1, Type = 0 } },
+		};
 
-		private Board _board;
-		[SerializeField] [TextArea(10, 10)] private string _cellsFromLevel;
+		// Runtime
+		private Dictionary<Vector2Int, Cell> _board = new Dictionary<Vector2Int, Cell>();
 
 		private void Awake()
 		{
 			PrepareBoard();
-			RenderBoard();
 		}
 
-		[Button]
 		private void PrepareBoard()
 		{
-			var size = new Vector2Int(3, 3);
-			_board = new Board(size);
-
-			var rows = _cellsFromLevel.Split('\n');
-
-			for (int x = 0; x < rows.Length; x++)
+			foreach (var cell in _level)
 			{
-				var cells = rows[x].ToCharArray();
-				for (int y = 0; y < cells.Length; y++)
-				{
-					var type = (CellTypes)Enum.Parse(typeof(CellTypes), cells[y].ToString());
-					_board.Cells[x, y] = new Cell { Type = type, Content = null };
-				}
+				var position = cell.Key;
+				_board.Add(position, SpawnCell(position, cell.Value));
 			}
 		}
 
-		[Button]
-		private void RenderBoard()
+		private Cell SpawnCell(Vector2Int position, CellAuthoring authoringData)
 		{
-			for (int x = 0; x < _board.Cells.GetLength(0); x++)
-			{
-				for (int y = 0; y < _board.Cells.GetLength(1); y++)
-				{
-					var cell = _board.Cells[x, y];
-					var position = new Vector2Int(x, y);
-					SpawnCell(position, cell);
-				}
-			}
-		}
-
-		private void SpawnCell(Vector2Int position, Cell cell)
-		{
+			var prefab = Resources.Load<GameObject>("Prefabs/Cell");
 			var worldPosition = new Vector3(position.y, position.x, 0f);
-			var instance = GameObject.Instantiate(_cellPrefabs[(int)cell.Type], worldPosition, Quaternion.identity);
+			var instance = GameObject.Instantiate(prefab, worldPosition, Quaternion.identity);
+			var cell = instance.GetComponent<Cell>();
+
+			cell.Initialize(authoringData);
+
+			return cell;
 		}
 
 		[Button]
-		private void PlacePlant()
+		private void PlacePlant(Vector2Int position)
 		{
-
+			_board[position].SetContent(0);
 		}
+	}
+
+	public class CellAuthoring
+	{
+		public int Content = -1;
+		public int Type;
 	}
 }

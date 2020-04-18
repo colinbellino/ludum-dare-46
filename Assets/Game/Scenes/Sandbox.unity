@@ -277,11 +277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617b79e7690c3a4985ad17d4aa160da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellPrefabs:
-  - {fileID: 2733760797463611182, guid: 8dac30f2edce8864396168dfd471660a, type: 3}
-  - {fileID: 2733760797463611182, guid: 4422d4a241e4da145af9c6ca53f71b7a, type: 3}
-  _cellsFromLevel: '001
-
-    001
-
-    001'
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
