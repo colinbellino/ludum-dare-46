@@ -14,7 +14,7 @@ namespace GameJam.Core
 		private Camera _camera;
 
 		private Dictionary<Vector2Int, CellAuthoring> _level = new Dictionary<Vector2Int, CellAuthoring> {
-			{ new Vector2Int(0, 0), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(0, 0), new CellAuthoring { Content = 0, Type = 0, Fire = 1 } },
 			{ new Vector2Int(0, 1), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(0, 2), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(0, 3), new CellAuthoring { Content = -1, Type = 0 } },
@@ -38,7 +38,7 @@ namespace GameJam.Core
 			{ new Vector2Int(4, 1), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(4, 2), new CellAuthoring { Content = -1, Type = 0 } },
 			{ new Vector2Int(4, 3), new CellAuthoring { Content = -1, Type = 0 } },
-			{ new Vector2Int(4, 4), new CellAuthoring { Content = -1, Type = 0 } },
+			{ new Vector2Int(4, 4), new CellAuthoring { Content = 1, Type = 0 } },
 		};
 
 		// Runtime
@@ -113,5 +113,6 @@ namespace GameJam.Core
 	{
 		public int Content;
 		public int Type;
+		public int Fire;
 	}
 }
