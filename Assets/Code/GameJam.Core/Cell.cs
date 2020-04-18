@@ -11,7 +11,7 @@ namespace GameJam.Core
 
 		public void Initialize(CellAuthoring authoringData)
 		{
-			if (authoringData.Content > 0)
+			if (authoringData.Content > -1)
 			{
 				Content = SpawnContent(authoringData.Content);
 			}
@@ -24,9 +24,13 @@ namespace GameJam.Core
 			if (Content)
 			{
 				Destroy(Content.gameObject);
+				Content = null;
 			}
 
-			Content = SpawnContent(contentId);
+			if (contentId > -1)
+			{
+				Content = SpawnContent(contentId);
+			}
 		}
 
 		private CellContent SpawnContent(int contentId)
