@@ -74,6 +74,7 @@ namespace GameJam.Core
 			}
 
 			_buttons.Clear();
+			UpdateActiveButton();
 		}
 
 		private void SpawnButton(Structure data, int quantity)
