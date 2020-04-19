@@ -99,23 +99,23 @@ namespace GameJam.Core
 			_simulationManager.StopSimulation();
 			_actionBars.SetActive(false);
 		}
-	}
 
-	public enum States
-	{
-		Idle,
-		MainMenu,
-		Game,
-		Credits,
-		Quit,
-	}
+		public enum States
+		{
+			Idle,
+			MainMenu,
+			Game,
+			Credits,
+			Quit,
+		}
 
-	public enum Triggers
-	{
-		ShowMenu,
-		StartPlay,
-		ShowCredits,
-		QuitGame,
-		NextLevel,
+		public enum Triggers
+		{
+			ShowMenu,
+			StartPlay,
+			ShowCredits,
+			QuitGame,
+			NextLevel,
+		}
 	}
 }
