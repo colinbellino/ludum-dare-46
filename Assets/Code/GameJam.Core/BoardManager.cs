@@ -22,6 +22,7 @@ namespace GameJam.Core
 		private int _selectedStructureIndex;
 
 		public event Action<Dictionary<Structure, int>> AvailableStructuresChanged;
+		public event Action<(int, int)> AvailableStructureQuantityChanged;
 
 		private void Awake()
 		{
@@ -84,6 +85,7 @@ namespace GameJam.Core
 
 			_structuresAvailable[data] += 1;
 			AvailableStructuresChanged?.Invoke(_structuresAvailable);
+			AvailableStructureQuantityChanged?.Invoke((data.Id, _structuresAvailable[data]));
 		}
 
 		private void PlaceSelectedStructure()
@@ -98,7 +100,7 @@ namespace GameJam.Core
 			_highlightedCell.PlaceStructure(data);
 
 			_structuresAvailable[data] -= 1;
-			AvailableStructuresChanged?.Invoke(_structuresAvailable);
+			AvailableStructureQuantityChanged?.Invoke((data.Id, _structuresAvailable[data]));
 		}
 
 		private void LoadLevel(Level level)

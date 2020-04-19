@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace GameJam.Core
 {
@@ -13,27 +16,37 @@ namespace GameJam.Core
 		private void OnEnable()
 		{
 			_boardManager.AvailableStructuresChanged += OnAvailableStructuresChanged;
+			_boardManager.AvailableStructureQuantityChanged += OnAvailableStructureQuantityChanged;
 		}
 
 		private void OnDisable()
 		{
 			_boardManager.AvailableStructuresChanged -= OnAvailableStructuresChanged;
+			_boardManager.AvailableStructureQuantityChanged -= OnAvailableStructureQuantityChanged;
 
 			DestroyButtons();
 		}
+
 		private void OnAvailableStructuresChanged(Dictionary<Structure, int> structures)
 		{
 			foreach (var item in structures)
 			{
-				_buttons.TryGetValue(item.Key.Id, out var button);
-				if (button != null)
-				{
-					button.SetQuantity(item.Value);
-				}
-				else
-				{
-					SpawnButton(item.Key, item.Value);
-				}
+				SpawnButton(item.Key, item.Value);
+			}
+
+			EventSystem.current.SetSelectedGameObject(_buttons.First().Value.gameObject);
+		}
+
+		private void OnAvailableStructureQuantityChanged((int, int) tuple)
+		{
+			var structureId = tuple.Item1;
+			var quantity = tuple.Item2;
+
+			_buttons.TryGetValue(structureId, out var button);
+			if (button != null)
+			{
+				button.UpdateState(quantity);
+				EventSystem.current.SetSelectedGameObject(button.gameObject);
 			}
 		}
 
@@ -50,8 +63,13 @@ namespace GameJam.Core
 		private void SpawnButton(Structure data, int quantity)
 		{
 			var button = Instantiate(_actionButtonPrefab, transform);
-			button.Initialize(data, quantity, () => { _boardManager.SelectStructure(data.Id); });
+			button.Initialize(data, quantity, () =>
+			{
+				_boardManager.SelectStructure(data.Id);
+			});
 			_buttons.Add(data.Id, button);
+
+			button.UpdateState(quantity);
 		}
 	}
 }
