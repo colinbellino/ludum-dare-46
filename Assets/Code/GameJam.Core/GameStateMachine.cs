@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 using Stateless;
 
@@ -13,6 +12,8 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _actionBars;
 
 		private StateMachine<States, Triggers> _gameState;
+
+		public string StateName => _gameState?.State.ToString();
 
 		private void CreateGameStateMachine()
 		{
