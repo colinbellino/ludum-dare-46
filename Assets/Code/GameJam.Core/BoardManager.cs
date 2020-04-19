@@ -74,6 +74,8 @@ namespace GameJam.Core
 			{
 				GameObject.Destroy(item.Value.gameObject);
 			}
+
+			Board.Clear();
 		}
 
 		private CellComponent GenerateCell(Vector2Int position, Cell data)

@@ -26,6 +26,11 @@ namespace GameJam.Core
 			InvokeRepeating("Tick", 0, 0.5f);
 		}
 
+		public void StopSimulation()
+		{
+			CancelInvoke("Tick");
+		}
+
 		private void Tick()
 		{
 			_processedCells = new List<CellComponent>();
