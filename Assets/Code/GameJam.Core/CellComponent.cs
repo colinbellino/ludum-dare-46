@@ -50,6 +50,12 @@ namespace GameJam.Core
 			return HasComponent<UnconstructibleFlag>() == false && _structure.IsActive == false;
 		}
 
+		// 🤠
+		public bool CanDestroy()
+		{
+			return HasComponent<IndestructibleFlag>() == false && _structure.IsActive == true;
+		}
+
 		public bool IsOnFire() => _fire.Amount > 0;
 
 		public void Burn()
@@ -73,7 +79,10 @@ namespace GameJam.Core
 
 		public bool HasComponent<T>()
 		{
-			return _structure.TryGetComponent<T>(out var structureComponent) || _terrain.TryGetComponent<T>(out var terrainComponent);
+			return
+				gameObject.TryGetComponent<T>(out _) ||
+				_structure.TryGetComponent<T>(out _) ||
+				_terrain.TryGetComponent<T>(out _);
 		}
 	}
 }

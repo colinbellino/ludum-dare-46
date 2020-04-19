@@ -71,7 +71,7 @@ namespace GameJam.Core
 
 			if (Mouse.current.rightButton.wasPressedThisFrame)
 			{
-				if (_highlightedCell?.HasStructure() == true)
+				if (_highlightedCell?.CanDestroy() == true)
 				{
 					DestroyHightlightedStructure();
 				}
@@ -84,7 +84,6 @@ namespace GameJam.Core
 			_highlightedCell.DestroyStructure();
 
 			_structuresAvailable[data] += 1;
-			AvailableStructuresChanged?.Invoke(_structuresAvailable);
 			AvailableStructureQuantityChanged?.Invoke((data.Id, _structuresAvailable[data]));
 		}
 
@@ -179,7 +178,7 @@ namespace GameJam.Core
 				foreach (var cell in tempBoard)
 				{
 					var position = cell.Key;
-					Board.Add(position, GenerateCell(position, cell.Value));
+					Board.Add(position, SpawnCell(position, cell.Value));
 				}
 			}
 
@@ -200,7 +199,7 @@ namespace GameJam.Core
 			Board.Clear();
 		}
 
-		private CellComponent GenerateCell(Vector2Int position, Cell data)
+		private CellComponent SpawnCell(Vector2Int position, Cell data)
 		{
 			var localPosition = new Vector3(position.y, position.x, 0f);
 
@@ -208,6 +207,12 @@ namespace GameJam.Core
 			cell.transform.localPosition = localPosition;
 			cell.name = $"Cell [{position.x},{position.y}]";
 			cell.Initialize(position, data);
+
+			// Cells spawned by the level are indestructible
+			if (data.Structure > -1)
+			{
+				cell.gameObject.AddComponent<IndestructibleFlag>();
+			}
 
 			return cell;
 		}

@@ -12,6 +12,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private TextMeshProUGUI _name;
 		[SerializeField] [Required] private TextMeshProUGUI _quantity;
 		[SerializeField] [Required] private Image _image;
+		[SerializeField] [Required] private GameObject _highlight;
 
 		public void Initialize(Structure data, int quantity, Action _onActionClick)
 		{
@@ -21,10 +22,10 @@ namespace GameJam.Core
 			_button.onClick.AddListener(() => _onActionClick?.Invoke());
 		}
 
-		public void UpdateState(int quantity)
-		{
-			_quantity.text = quantity.ToString();
-			_button.interactable = quantity > 0;
-		}
+		public void SetQuantity(int quantity) => _quantity.text = quantity.ToString();
+
+		public void SetActive() => _highlight.SetActive(true);
+
+		public void SetInactive() => _highlight.SetActive(false);
 	}
 }
