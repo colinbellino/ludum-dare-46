@@ -109,7 +109,7 @@ namespace GameJam.Core
 			{
 				DestroyBoard();
 
-				foreach (var cell in _currentLevel.Board)
+				foreach (var cell in level.Board)
 				{
 					var position = cell.Key;
 					Board.Add(position, SpawnCell(position, cell.Value));
@@ -118,7 +118,7 @@ namespace GameJam.Core
 
 			{
 				// Make sure to clone or we will mutate the scriptable object !
-				_structuresAvailable = _currentLevel.Structures.ToDictionary(entry => entry.Key, entry => entry.Value); ;
+				_structuresAvailable = level.Structures.ToDictionary(entry => entry.Key, entry => entry.Value); ;
 				AvailableStructuresChanged?.Invoke(_structuresAvailable);
 			}
 		}
