@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -18,47 +19,64 @@ namespace GameJam.Core
 				new Vector2Int(1, 0),
 				new Vector2Int(-1, 0)
 			};
+		private const float _tickInterval = 0.5f;
 
 		private List<CellComponent> _processedCells;
+		private Coroutine _tickCoroutine;
 
 		public void StartSimulation()
 		{
-			InvokeRepeating("Tick", 0, 0.5f);
+			_tickCoroutine = StartCoroutine(Tick());
 		}
 
 		public void StopSimulation()
 		{
-			CancelInvoke("Tick");
+			StopCoroutine(_tickCoroutine);
 		}
 
-		private void Tick()
+		private IEnumerator Tick()
 		{
-			_processedCells = new List<CellComponent>();
-
-			var cellsToProcess = _board.Board.Values.ToList().Where(cell => cell.IsOnFire()).ToList();
-
-			foreach (var cell in cellsToProcess)
+			while (true)
 			{
-				TryToBurn(cell);
+				_processedCells = new List<CellComponent>();
 
-				// Find neighbours TO BURN MOAHHAHAHA
-				foreach (var direction in _directions)
+				var cellsToProcess = _board.Board.Values.ToList().Where(cell => cell.IsOnFire()).ToList();
+
+				foreach (var cell in cellsToProcess)
 				{
-					var destination = cell.Position + direction;
-					_board.Board.TryGetValue(destination, out var neighbour);
+					TryToBurn(cell);
 
-					if (neighbour?.CanBurn() == true)
+					// Find neighbours TO BURN MOAHHAHAHA
+					foreach (var direction in _directions)
 					{
-						TryToBurn(neighbour);
+						var destination = cell.Position + direction;
+						_board.Board.TryGetValue(destination, out var neighbour);
+
+						if (neighbour == null)
+						{
+							continue;
+						}
+
+						if (neighbour.CanBurn())
+						{
+							TryToBurn(neighbour);
+						}
+
+						if (neighbour.HasComponent<ExitComponent>())
+						{
+							GameEvents.WinGame();
+							yield break;
+						}
 					}
 				}
-			}
 
-			if (_processedCells.Count == 0)
-			{
-				// TODO:
-				// _gameStateMachine.Lose();
-				UnityEngine.Debug.Log("Simulation => Lose");
+				if (_processedCells.Count == 0)
+				{
+					GameEvents.LoseGame();
+					yield break;
+				}
+
+				yield return new WaitForSeconds(_tickInterval);
 			}
 		}
 

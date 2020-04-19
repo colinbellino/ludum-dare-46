@@ -60,5 +60,10 @@ namespace GameJam.Core
 		{
 			return $"Cell [{Position.x},{Position.y}]";
 		}
+
+		public bool HasComponent<T>()
+		{
+			return _structure.TryGetComponent<T>(out var component);
+		}
 	}
 }

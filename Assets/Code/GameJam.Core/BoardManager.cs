@@ -23,12 +23,12 @@ namespace GameJam.Core
 			_camera = Camera.main;
 		}
 
-		private void OnEnable()
+		public void Activate()
 		{
 			GenerateBoard(_currentLevel);
 		}
 
-		private void OnDisable()
+		public void Deactivate()
 		{
 			DestroyBoard();
 		}
@@ -72,7 +72,7 @@ namespace GameJam.Core
 		{
 			foreach (var item in Board)
 			{
-				GameObject.Destroy(item.Value.gameObject);
+				GameObject.DestroyImmediate(item.Value.gameObject);
 			}
 
 			Board.Clear();

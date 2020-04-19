@@ -11,55 +11,122 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _mainMenuUi;
 		[SerializeField] [Required] private GameObject _actionBars;
 
-		private StateMachine<States, Triggers> _gameState;
+		private StateMachine<States, Triggers> _machine;
 
-		public string StateName => _gameState?.State.ToString();
+		public string StateName => _machine?.State.ToString();
+
+		private void Start()
+		{
+			CreateGameStateMachine();
+
+			_machine.Fire(Triggers.ShowTitle);
+		}
 
 		private void CreateGameStateMachine()
 		{
-			_gameState = new StateMachine<States, Triggers>(States.Idle);
+			_machine = new StateMachine<States, Triggers>(States.Idle);
 
-			_gameState.Configure(States.Idle)
-				.Permit(Triggers.ShowMenu, States.MainMenu);
+			_machine.Configure(States.Idle)
+				.Permit(Triggers.ShowTitle, States.MainMenu);
 
-			_gameState.Configure(States.MainMenu)
+			_machine.Configure(States.MainMenu)
 				.Permit(Triggers.ShowCredits, States.Credits)
-				.Permit(Triggers.StartPlay, States.Game)
+				.Permit(Triggers.StartGame, States.GamePrepare)
 				.Permit(Triggers.QuitGame, States.Quit)
 				.OnEntry(MainMenuEnter)
 				.OnExit(MainMenuExit);
 
-			_gameState.Configure(States.Game)
-				.Permit(Triggers.ShowMenu, States.MainMenu)
-				.OnEntry(OnGameStart)
-				.OnExit(OnGameStop);
+			_machine.Configure(States.Game)
+				.Permit(Triggers.ShowCredits, States.Credits)
+				.Permit(Triggers.ShowTitle, States.MainMenu)
+				.OnEntry(() =>
+				{
+					GameEvents.GameWon += Win;
+					GameEvents.GameLost += Lose;
+				})
+				.OnExit(() =>
+				{
+					GameEvents.GameWon -= Win;
+					GameEvents.GameLost -= Lose;
+				});
 
-			_gameState.Configure(States.Credits)
-				.Permit(Triggers.ShowMenu, States.MainMenu);
+			{
+				_machine.Configure(States.GamePrepare)
+					.SubstateOf(States.Game)
+					.Permit(Triggers.StartSimulation, States.GameSimulate)
+					.OnEntry(() =>
+					{
+						_boardManager.Activate();
+						_actionBars.SetActive(true);
+					})
+					.OnExit(() =>
+					{
+						_actionBars.SetActive(false);
+					});
 
-			_gameState.Configure(States.Quit)
+				_machine.Configure(States.GameSimulate)
+					.SubstateOf(States.Game)
+					.Permit(Triggers.Win, States.GameWin)
+					.Permit(Triggers.Lose, States.GameLose)
+					.OnEntry(() =>
+					{
+						_simulationManager.StartSimulation();
+					})
+					.OnExit(() =>
+					{
+						_simulationManager.StopSimulation();
+					});
+
+				_machine.Configure(States.GameWin)
+					.SubstateOf(States.Game)
+					.Permit(Triggers.StartGame, States.GamePrepare)
+					.OnEntry(() =>
+					{
+						_machine.Fire(Triggers.StartGame);
+					})
+					.OnExit(() =>
+					{
+						_boardManager.Deactivate();
+					});
+
+				_machine.Configure(States.GameLose)
+					.SubstateOf(States.Game)
+					.OnEntry(() =>
+					{
+						_machine.Fire(Triggers.ShowTitle);
+					})
+					.OnExit(() =>
+					{
+						_boardManager.Deactivate();
+					});
+			}
+
+			_machine.Configure(States.Credits)
+				.Permit(Triggers.ShowTitle, States.MainMenu);
+
+			_machine.Configure(States.Quit)
 				.OnEntry(QuitEnter);
 
+			// _machine.OnTransitioned((transition) => { Debug.Log(StateName); });
 		}
 
-		[Button]
-		public void PlayTheGame()
-		{
-			_gameState.Fire(Triggers.StartPlay);
-		}
+		public void PlayTheGame() => _machine.Fire(Triggers.StartGame);
+
+		public void StartSimulation() => _machine.Fire(Triggers.StartSimulation);
 
 		public void QuitGame()
 		{
-			if (_gameState.IsInState(States.MainMenu))
+			if (_machine.IsInState(States.MainMenu))
 			{
-				_gameState.Fire(Triggers.QuitGame);
+				_machine.Fire(Triggers.QuitGame);
 			}
 		}
 
-		public void BackToMenu()
-		{
-			_gameState.Fire(Triggers.ShowMenu);
-		}
+		public void BackToMenu() => _machine.Fire(Triggers.ShowTitle);
+
+		public void Win() => _machine.Fire(Triggers.Win);
+
+		public void Lose() => _machine.Fire(Triggers.Lose);
 
 		private void QuitEnter()
 		{
@@ -68,13 +135,6 @@ namespace GameJam.Core
 #else
 			Application.Quit();
 #endif
-		}
-
-		private void Start()
-		{
-			CreateGameStateMachine();
-
-			_gameState.Fire(Triggers.ShowMenu);
 		}
 
 		private void MainMenuEnter()
@@ -87,32 +147,26 @@ namespace GameJam.Core
 			_mainMenuUi.SetActive(false);
 		}
 
-		private void OnGameStart()
-		{
-			_boardManager.enabled = true;
-			_actionBars.SetActive(true);
-		}
-
-		private void OnGameStop()
-		{
-			_boardManager.enabled = false;
-			_simulationManager.StopSimulation();
-			_actionBars.SetActive(false);
-		}
-
 		public enum States
 		{
 			Idle,
 			MainMenu,
 			Game,
+			GamePrepare,
+			GameSimulate,
+			GameWin,
+			GameLose,
 			Credits,
 			Quit,
 		}
 
 		public enum Triggers
 		{
-			ShowMenu,
-			StartPlay,
+			ShowTitle,
+			StartGame,
+			StartSimulation,
+			Win,
+			Lose,
 			ShowCredits,
 			QuitGame,
 		}
