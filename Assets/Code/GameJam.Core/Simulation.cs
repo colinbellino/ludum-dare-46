@@ -53,6 +53,13 @@ namespace GameJam.Core
 					}
 				}
 			}
+
+			if (_processedCells.Count == 0)
+			{
+				// TODO:
+				// _gameStateMachine.Lose();
+				UnityEngine.Debug.Log("Simulation => Lose");
+			}
 		}
 
 		private void TryToBurn(CellComponent cell)
