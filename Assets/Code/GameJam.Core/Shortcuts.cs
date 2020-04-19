@@ -20,7 +20,7 @@ namespace GameJam.Core
 			{
 				if (_keyboard.escapeKey.wasPressedThisFrame)
 				{
-					_gameStateMachine.ReturnToMenuOrQuit();
+					_gameStateMachine.QuitGame();
 				}
 			}
 		}

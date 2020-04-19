@@ -32,7 +32,6 @@ namespace GameJam.Core
 			_gameState.Configure(States.Game)
 				.Permit(Triggers.ShowCredits, States.Credits)
 				.Permit(Triggers.ShowMenu, States.MainMenu)
-				.PermitReentry(Triggers.NextLevel)
 				.OnEntry(OnGameStart)
 				.OnExit(OnGameStop);
 
@@ -50,16 +49,17 @@ namespace GameJam.Core
 			_gameState.Fire(Triggers.StartPlay);
 		}
 
-		public void ReturnToMenuOrQuit()
+		public void QuitGame()
 		{
 			if (_gameState.IsInState(States.MainMenu))
 			{
 				_gameState.Fire(Triggers.QuitGame);
 			}
-			else
-			{
-				_gameState.Fire(Triggers.ShowMenu);
-			}
+		}
+
+		public void BackToMenu()
+		{
+			_gameState.Fire(Triggers.ShowMenu);
 		}
 
 		private void QuitEnter()
@@ -116,7 +116,6 @@ namespace GameJam.Core
 			StartPlay,
 			ShowCredits,
 			QuitGame,
-			NextLevel,
 		}
 	}
 }
