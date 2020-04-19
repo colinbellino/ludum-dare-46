@@ -17,13 +17,13 @@ namespace GameJam.Core
 		{
 			Position = position;
 
-			if (data.Terrain != null)
+			if (data.Terrain > -1)
 			{
 				var terrain = GameSettings.Instance.AllTerrains.Find(t => t.Id == data.Terrain);
 				_terrain.Initialize(terrain);
 			}
 
-			if (data.Structure != null)
+			if (data.Structure > -1)
 			{
 				var structure = GameSettings.Instance.AllStructures.Find(t => t.Id == data.Structure);
 				_structure.Initialize(structure);

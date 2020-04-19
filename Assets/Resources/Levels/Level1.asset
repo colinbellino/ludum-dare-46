@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 25
+      Data: 60
     - Name: 
       Entry: 7
       Data: 
@@ -54,23 +54,11 @@ MonoBehaviour:
       Entry: 7
       Data: 2|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 1
@@ -99,23 +87,11 @@ MonoBehaviour:
       Entry: 7
       Data: 3|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -144,23 +120,11 @@ MonoBehaviour:
       Entry: 7
       Data: 4|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -189,23 +153,11 @@ MonoBehaviour:
       Entry: 7
       Data: 5|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -234,23 +186,11 @@ MonoBehaviour:
       Entry: 7
       Data: 6|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -268,10 +208,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -279,23 +219,11 @@ MonoBehaviour:
       Entry: 7
       Data: 7|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -313,10 +241,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -324,23 +252,11 @@ MonoBehaviour:
       Entry: 7
       Data: 8|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -358,10 +274,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -369,23 +285,11 @@ MonoBehaviour:
       Entry: 7
       Data: 9|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -403,10 +307,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -414,23 +318,11 @@ MonoBehaviour:
       Entry: 7
       Data: 10|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -448,10 +340,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 9
     - Name: 
       Entry: 8
       Data: 
@@ -459,23 +351,11 @@ MonoBehaviour:
       Entry: 7
       Data: 11|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -493,7 +373,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
       Data: 0
@@ -504,23 +384,11 @@ MonoBehaviour:
       Entry: 7
       Data: 12|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -538,7 +406,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
       Data: 1
@@ -549,23 +417,11 @@ MonoBehaviour:
       Entry: 7
       Data: 13|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -583,7 +439,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
       Data: 2
@@ -594,23 +450,11 @@ MonoBehaviour:
       Entry: 7
       Data: 14|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -628,7 +472,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
       Data: 3
@@ -639,23 +483,11 @@ MonoBehaviour:
       Entry: 7
       Data: 15|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -673,7 +505,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
       Data: 4
@@ -684,23 +516,11 @@ MonoBehaviour:
       Entry: 7
       Data: 16|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -718,10 +538,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -729,23 +549,11 @@ MonoBehaviour:
       Entry: 7
       Data: 17|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -763,10 +571,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -774,23 +582,11 @@ MonoBehaviour:
       Entry: 7
       Data: 18|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -808,10 +604,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -819,23 +615,11 @@ MonoBehaviour:
       Entry: 7
       Data: 19|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -853,10 +637,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -864,23 +648,11 @@ MonoBehaviour:
       Entry: 7
       Data: 20|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -898,10 +670,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 9
     - Name: 
       Entry: 8
       Data: 
@@ -909,23 +681,11 @@ MonoBehaviour:
       Entry: 7
       Data: 21|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -943,7 +703,7 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 2
     - Name: 
       Entry: 3
       Data: 0
@@ -954,23 +714,671 @@ MonoBehaviour:
       Entry: 7
       Data: 22|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 3
       Data: 1
     - Name: 
       Entry: 8
       Data: 
-    - Name: Structure
+    - Name: $v
       Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+      Data: 23|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
     - Name: 
-      Entry: 6
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 24|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 0
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 25|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 26|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 27|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 28|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 29|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 30|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 31|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 32|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 33|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 34|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 0
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 35|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 36|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 37|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 38|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 39|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 40|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 41|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 42|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -997,25 +1405,13 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 23|GameJam.Core.Cell, GameJam.Core
+      Data: 43|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Entry: 3
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1042,25 +1438,13 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 24|GameJam.Core.Cell, GameJam.Core
+      Data: 44|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1087,25 +1471,13 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 25|GameJam.Core.Cell, GameJam.Core
+      Data: 45|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1132,25 +1504,508 @@ MonoBehaviour:
       Data: 
     - Name: $v
       Entry: 7
-      Data: 26|GameJam.Core.Cell, GameJam.Core
+      Data: 46|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
       Entry: 3
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 47|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 48|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 49|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 50|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 51|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 52|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 3
       Data: 1
     - Name: 
       Entry: 8
       Data: 
+    - Name: $v
+      Entry: 7
+      Data: 53|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: -1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 54|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 0
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 55|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 0
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 56|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 57|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 58|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 59|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 60|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
+    - Name: Fire
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: $v
+      Entry: 7
+      Data: 61|GameJam.Core.Cell, GameJam.Core
+    - Name: Terrain
+      Entry: 3
+      Data: 1
+    - Name: Structure
+      Entry: 3
+      Data: 1
     - Name: Fire
       Entry: 3
       Data: 0

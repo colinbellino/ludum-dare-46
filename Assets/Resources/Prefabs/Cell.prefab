@@ -128,6 +128,7 @@ MonoBehaviour:
   _renderer: {fileID: 3067425275006382917}
   _fireSprites:
   - {fileID: 1098286324429101383, guid: 35eb3ee4794c5e74da6dcb4a40ecdd97, type: 3}
+  - {fileID: 7419590508823533442, guid: 35eb3ee4794c5e74da6dcb4a40ecdd97, type: 3}
 --- !u!1 &4769155664632167028
 GameObject:
   m_ObjectHideFlags: 0

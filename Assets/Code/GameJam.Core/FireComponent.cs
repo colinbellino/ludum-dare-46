@@ -20,7 +20,8 @@ namespace GameJam.Core
 		{
 			if (Amount > 0)
 			{
-				_renderer.sprite = _fireSprites[0];
+				var index = Mathf.Min(Amount - 1, _fireSprites.Length - 1);
+				_renderer.sprite = _fireSprites[index];
 			}
 			else
 			{
