@@ -63,8 +63,8 @@ namespace GameJam.Core
 					.Permit(Triggers.StartSimulation, States.GameSimulate)
 					.OnEntry(() =>
 					{
-						_boardManager.Activate();
 						_prepareHud.SetActive(true);
+						_boardManager.Activate();
 					})
 					.OnExit(() =>
 					{

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647e41aae83ba1c45859cad6d323c03b, type: 3}
-  m_Name: Rock
+  m_Script: {fileID: 11500000, guid: 7e57d58e27196d74da89afc73534c750, type: 3}
+  m_Name: Flower
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,6 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Id: 0
-  Sprite: {fileID: 1887494081247492234, guid: 40b45ec72084b024fa4caa4291ef85da, type: 3}
-  Unconstructible: 1
+  Id: 2
+  Name: Flower
+  Sprite: {fileID: 3373568495408583166, guid: 34b7bcf08e0ec38408be2258f8e38b9e, type: 3}
+  IsExit: 0
