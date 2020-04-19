@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +19,7 @@ namespace GameJam.Core
 		public Dictionary<Vector2Int, CellComponent> Board { get; } = new Dictionary<Vector2Int, CellComponent>();
 		private Dictionary<Structure, int> _structuresAvailable;
 		private CellComponent _highlightedCell;
-		private int _selectedStructure;
+		private int _selectedStructureIndex;
 
 		public event Action<Dictionary<Structure, int>> AvailableStructuresChanged;
 
@@ -40,7 +41,14 @@ namespace GameJam.Core
 
 		public void SelectStructure(int id)
 		{
-			_selectedStructure = id;
+			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == id);
+			if (_structuresAvailable[data] <= 1)
+			{
+				Debug.LogWarning($"You can't select \"{data.Name}\" DOOD.");
+				return;
+			}
+
+			_selectedStructureIndex = GameSettings.Instance.AllStructures.FindIndex(structure => structure.Id == id);
 		}
 
 		private void Update()
@@ -54,22 +62,43 @@ namespace GameJam.Core
 		{
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 			{
-				if (_highlightedCell)
+				if (_highlightedCell?.CanConstruct() == true)
 				{
-					if (_highlightedCell.HasStructure())
-					{
-						_highlightedCell.DestroyStructure();
-					}
-					else
-					{
-						if (_highlightedCell.CanConstruct())
-						{
-							var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == _selectedStructure);
-							_highlightedCell.PlaceStructure(data);
-						}
-					}
+					PlaceSelectedStructure();
 				}
 			}
+
+			if (Mouse.current.rightButton.wasPressedThisFrame)
+			{
+				if (_highlightedCell?.HasStructure() == true)
+				{
+					DestroyHightlightedStructure();
+				}
+			}
+		}
+
+		private void DestroyHightlightedStructure()
+		{
+			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == _highlightedCell.StructureId);
+			_highlightedCell.DestroyStructure();
+
+			_structuresAvailable[data] += 1;
+			AvailableStructuresChanged?.Invoke(_structuresAvailable);
+		}
+
+		private void PlaceSelectedStructure()
+		{
+			var data = GameSettings.Instance.AllStructures[_selectedStructureIndex];
+			if (_structuresAvailable[data] <= 0)
+			{
+				Debug.LogWarning($"You don't have any \"{data.Name}\" DOOD.");
+				return;
+			}
+
+			_highlightedCell.PlaceStructure(data);
+
+			_structuresAvailable[data] -= 1;
+			AvailableStructuresChanged?.Invoke(_structuresAvailable);
 		}
 
 		private void LoadLevel(Level level)
@@ -153,7 +182,8 @@ namespace GameJam.Core
 			}
 
 			{
-				_structuresAvailable = _currentLevel.Structures;
+				// Make sure to clone or we will mutate the scriptable object !
+				_structuresAvailable = _currentLevel.Structures.ToDictionary(entry => entry.Key, entry => entry.Value); ;
 				AvailableStructuresChanged?.Invoke(_structuresAvailable);
 			}
 		}

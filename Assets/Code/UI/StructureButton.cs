@@ -19,6 +19,13 @@ namespace GameJam.Core
 			_image.sprite = data.Sprite;
 			_quantity.text = quantity.ToString();
 			_button.onClick.AddListener(() => _onActionClick?.Invoke());
+
+			_button.interactable = quantity > 0;
+		}
+
+		public void SetQuantity(int quantity)
+		{
+			_quantity.text = quantity.ToString();
 		}
 	}
 }

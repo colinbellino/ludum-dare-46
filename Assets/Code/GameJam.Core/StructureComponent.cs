@@ -8,6 +8,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private SpriteRenderer _renderer;
 
 		public bool IsActive { get; private set; }
+		public int Id { get; private set; }
 
 		public void Initialize(Structure data)
 		{
@@ -34,6 +35,7 @@ namespace GameJam.Core
 		private void SetData(Structure data)
 		{
 			name = $"Structure ({data?.Name})";
+			Id = data ? data.Id : -1;
 
 			if (data?.Sprite)
 			{

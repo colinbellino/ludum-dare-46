@@ -12,9 +12,13 @@ namespace GameJam.Core
 
 		public Vector2Int Position { get; private set; }
 		public event Action Burnt;
+		private Cell _data;
+
+		public int StructureId => _structure.Id;
 
 		public void Initialize(Vector2Int position, Cell data)
 		{
+			_data = data;
 			Position = position;
 
 			if (data.Terrain > -1)
@@ -43,7 +47,7 @@ namespace GameJam.Core
 		// 🎩
 		public bool CanConstruct()
 		{
-			return HasComponent<UnconstructibleFlag>() == false;
+			return HasComponent<UnconstructibleFlag>() == false && _structure.IsActive == false;
 		}
 
 		public bool IsOnFire() => _fire.Amount > 0;
