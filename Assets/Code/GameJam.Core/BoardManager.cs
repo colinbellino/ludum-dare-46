@@ -61,6 +61,7 @@ namespace GameJam.Core
 
 		private void GenerateBoard(Level level)
 		{
+			DestroyBoard();
 			foreach (var cell in level.Board)
 			{
 				var position = cell.Key;

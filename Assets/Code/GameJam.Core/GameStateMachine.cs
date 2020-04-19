@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 using Stateless;
+using Stateless.Graph;
 
 namespace GameJam.Core
 {
@@ -9,7 +10,8 @@ namespace GameJam.Core
 		[SerializeField] [Required] private BoardManager _boardManager;
 		[SerializeField] [Required] private Simulation _simulationManager;
 		[SerializeField] [Required] private GameObject _mainMenuUi;
-		[SerializeField] [Required] private GameObject _actionBars;
+		[SerializeField] [Required] private GameObject _prepareHud;
+		[SerializeField] [Required] private GameObject _backToMenuButton;
 
 		private StateMachine<States, Triggers> _machine;
 
@@ -43,11 +45,16 @@ namespace GameJam.Core
 				{
 					GameEvents.GameWon += Win;
 					GameEvents.GameLost += Lose;
+
+					_backToMenuButton.SetActive(true);
 				})
 				.OnExit(() =>
 				{
 					GameEvents.GameWon -= Win;
 					GameEvents.GameLost -= Lose;
+
+					_boardManager.Deactivate();
+					_backToMenuButton.SetActive(false);
 				});
 
 			{
@@ -57,11 +64,11 @@ namespace GameJam.Core
 					.OnEntry(() =>
 					{
 						_boardManager.Activate();
-						_actionBars.SetActive(true);
+						_prepareHud.SetActive(true);
 					})
 					.OnExit(() =>
 					{
-						_actionBars.SetActive(false);
+						_prepareHud.SetActive(false);
 					});
 
 				_machine.Configure(States.GameSimulate)
@@ -83,10 +90,6 @@ namespace GameJam.Core
 					.OnEntry(() =>
 					{
 						_machine.Fire(Triggers.StartGame);
-					})
-					.OnExit(() =>
-					{
-						_boardManager.Deactivate();
 					});
 
 				_machine.Configure(States.GameLose)
@@ -94,10 +97,6 @@ namespace GameJam.Core
 					.OnEntry(() =>
 					{
 						_machine.Fire(Triggers.ShowTitle);
-					})
-					.OnExit(() =>
-					{
-						_boardManager.Deactivate();
 					});
 			}
 
@@ -108,6 +107,14 @@ namespace GameJam.Core
 				.OnEntry(QuitEnter);
 
 			// _machine.OnTransitioned((transition) => { Debug.Log(StateName); });
+		}
+
+		// Use something like this to vizualize: http://www.webgraphviz.com/
+		[Button]
+		private void CopyGraph()
+		{
+			UnityEngine.Debug.Log("Graph data copied to clipboard!");
+			GUIUtility.systemCopyBuffer = UmlDotGraph.Format(_machine.GetInfo());
 		}
 
 		public void PlayTheGame() => _machine.Fire(Triggers.StartGame);
