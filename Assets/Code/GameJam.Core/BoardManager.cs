@@ -39,15 +39,14 @@ namespace GameJam.Core
 			{
 				if (_highlightedCell)
 				{
-					var structureToPlace = 0;
-					if (_highlightedCell.Structure)
+					if (_highlightedCell.HasStructure())
 					{
 						_highlightedCell.DestroyStructure();
 					}
 					else
 					{
-
-						_highlightedCell.PlaceStructure(structureToPlace);
+						var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == 0);
+						_highlightedCell.PlaceStructure(data);
 					}
 				}
 			}

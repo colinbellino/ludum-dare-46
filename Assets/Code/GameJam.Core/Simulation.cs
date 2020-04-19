@@ -30,15 +30,10 @@ namespace GameJam.Core
 		{
 			_processedCells = new List<CellComponent>();
 
-			var cellsToProcess = _board.Board.Values.ToList().Where(IsBurning).ToList();
+			var cellsToProcess = _board.Board.Values.ToList().Where(cell => cell.IsOnFire()).ToList();
 
 			foreach (var cell in cellsToProcess)
 			{
-				if (cell.Structure?.Fire < 1)
-				{
-					return;
-				}
-
 				TryToBurn(cell);
 
 				// Find neighbours TO BURN MOAHHAHAHA
@@ -47,17 +42,12 @@ namespace GameJam.Core
 					var destination = cell.Position + direction;
 					_board.Board.TryGetValue(destination, out var neighbour);
 
-					if (neighbour?.Structure)
+					if (neighbour?.CanBurn() == true)
 					{
 						TryToBurn(neighbour);
 					}
 				}
 			}
-		}
-
-		private bool IsBurning(CellComponent cell, int index)
-		{
-			return cell.Structure?.Fire > 0;
 		}
 
 		private void TryToBurn(CellComponent cell)
@@ -67,14 +57,8 @@ namespace GameJam.Core
 				return;
 			}
 
-			cell.Structure.AddFire(1);
+			cell.Burn();
 			_processedCells.Add(cell);
-
-			var limit = 2; // Get this from content data
-			if (cell.Structure.Fire > limit)
-			{
-				cell.DestroyStructure();
-			}
 		}
 	}
 }

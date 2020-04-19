@@ -6,41 +6,35 @@ namespace GameJam.Core
 	public class StructureComponent : MonoBehaviour
 	{
 		[SerializeField] [Required] private SpriteRenderer _renderer;
-		[SerializeField] [Required] private SpriteRenderer _fireRenderer;
 
-		public int Fire { get; private set; }
+		public bool IsActive { get; private set; }
 
 		public void Initialize(Structure data)
 		{
-			name = $"Content ({data.Name})";
-
-			_renderer.sprite = data.Sprite;
+			PlaceStructure(data);
 		}
 
-		public void SetFire(int fireLevel)
+		public void PlaceStructure(Structure data)
 		{
-			Fire = fireLevel;
-
-			UpdateFireRender();
+			SetData(data);
+			IsActive = true;
 		}
 
-		public void AddFire(int amount)
+		public void DestroyStructure()
 		{
-			Fire += amount;
-
-			UpdateFireRender();
+			SetData(null);
+			IsActive = false;
 		}
 
-		private void UpdateFireRender()
+		private void SetData(Structure data)
 		{
-			if (Fire > 0)
+			if (data?.Sprite)
 			{
-				// TODO: Move the fire handling to the cell level
-				_fireRenderer.sprite = GameSettings.Instance.FireSprite;
+				_renderer.sprite = data.Sprite;
 			}
 			else
 			{
-				_fireRenderer.sprite = null;
+				_renderer.sprite = null;
 			}
 		}
 	}

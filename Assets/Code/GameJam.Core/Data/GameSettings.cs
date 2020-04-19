@@ -29,19 +29,6 @@ namespace GameJam.Core
 		[AssetsOnly]
 		public CellComponent CellPrefab;
 
-		[Required]
-		[AssetsOnly]
-		public TerrainComponent TerrainPrefab;
-
-		[Required]
-		[AssetsOnly]
-		public StructureComponent StructurePrefab;
-
-		// TODO: Use a prefab like other things we spawn
-		[Required]
-		[AssetsOnly]
-		public Sprite FireSprite;
-
 #if UNITY_EDITOR
 		[Button(ButtonSizes.Medium), PropertyOrder(-1)]
 		public void UpdateGameSettings()
@@ -52,10 +39,12 @@ namespace GameJam.Core
 
 			AllTerrains = AssetDatabase.FindAssets($"t:{typeof(Terrain).FullName}")
 				.Select(guid => AssetDatabase.LoadAssetAtPath<Terrain>(AssetDatabase.GUIDToAssetPath(guid)))
+				.OrderBy(asset => asset.Id)
 				.ToList();
 
 			AllStructures = AssetDatabase.FindAssets($"t:{typeof(Structure).FullName}")
 				.Select(guid => AssetDatabase.LoadAssetAtPath<Structure>(AssetDatabase.GUIDToAssetPath(guid)))
+				.OrderBy(asset => asset.Id)
 				.ToList();
 		}
 #endif

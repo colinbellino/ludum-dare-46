@@ -1,13 +1,15 @@
-using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace GameJam.Core
 {
 	public class CellComponent : MonoBehaviour
 	{
+		[SerializeField] [Required] private TerrainComponent _terrain;
+		[SerializeField] [Required] private StructureComponent _structure;
+		[SerializeField] [Required] private FireComponent _fire;
+
 		public Vector2Int Position { get; private set; }
-		public TerrainComponent Terrain { get; private set; }
-		public StructureComponent Structure { get; private set; }
 
 		public void Initialize(Vector2Int position, Cell data)
 		{
@@ -15,50 +17,40 @@ namespace GameJam.Core
 
 			if (data.Terrain != null)
 			{
-				Terrain = SpawnTerrain((int)data.Terrain);
+				var terrain = GameSettings.Instance.AllTerrains.Find(t => t.Id == data.Terrain);
+				_terrain.Initialize(terrain);
 			}
 
 			if (data.Structure != null)
 			{
-				Structure = SpawnStructure((int)data.Structure);
-				Structure.SetFire(data.Fire);
+				var structure = GameSettings.Instance.AllStructures.Find(t => t.Id == data.Structure);
+				_structure.Initialize(structure);
 			}
+
+			_fire.Initialize(data.Fire);
 		}
 
-		public void PlaceStructure(int structureId)
-		{
-			Structure = SpawnStructure(structureId);
-		}
+		public bool HasStructure() => _structure.IsActive;
 
-		public void DestroyStructure()
+		public void PlaceStructure(Structure structure) => _structure.PlaceStructure(structure);
+
+		public void DestroyStructure() => _structure.DestroyStructure();
+
+		public bool CanBurn() => HasStructure();
+
+		public bool IsOnFire() => _fire.Amount > 0;
+
+		public void Burn()
 		{
-			if (Structure == null)
+			_fire.Kindle();
+
+			// TODO: Get this from content data
+			var limit = 2;
+			if (_fire.Amount > limit)
 			{
-				return;
+				_fire.Extinguish();
+				DestroyStructure();
 			}
-
-			Destroy(Structure.gameObject);
-			Structure = null;
-		}
-
-		private TerrainComponent SpawnTerrain(int id)
-		{
-			var data = GameSettings.Instance.AllTerrains.Find(t => t.Id == id);
-
-			var terrain = Instantiate(GameSettings.Instance.TerrainPrefab, transform);
-			terrain.Initialize(data);
-
-			return terrain;
-		}
-
-		private StructureComponent SpawnStructure(int id)
-		{
-			var data = GameSettings.Instance.AllStructures.Find(t => t.Id == id);
-
-			var structure = Instantiate(GameSettings.Instance.StructurePrefab, transform);
-			structure.Initialize(data);
-
-			return structure;
 		}
 
 		public override string ToString()
