@@ -40,6 +40,12 @@ namespace GameJam.Core
 
 		public bool CanBurn() => HasStructure();
 
+		// 🎩
+		public bool CanConstruct()
+		{
+			return HasComponent<UnconstructibleFlag>() == false;
+		}
+
 		public bool IsOnFire() => _fire.Amount > 0;
 
 		public void Burn()
@@ -63,7 +69,7 @@ namespace GameJam.Core
 
 		public bool HasComponent<T>()
 		{
-			return _structure.TryGetComponent<T>(out var component);
+			return _structure.TryGetComponent<T>(out var structureComponent) || _terrain.TryGetComponent<T>(out var terrainComponent);
 		}
 	}
 }

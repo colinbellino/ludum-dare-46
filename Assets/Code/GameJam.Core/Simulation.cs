@@ -62,7 +62,7 @@ namespace GameJam.Core
 							TryToBurn(neighbour);
 						}
 
-						if (neighbour.HasComponent<ExitComponent>())
+						if (neighbour.HasComponent<ExitFlag>())
 						{
 							GameEvents.WinGame();
 							yield break;

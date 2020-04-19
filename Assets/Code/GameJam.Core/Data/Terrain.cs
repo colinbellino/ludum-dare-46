@@ -8,5 +8,6 @@ namespace GameJam.Core
 	{
 		public int Id;
 		public Sprite Sprite;
+		public bool Unconstructible;
 	}
 }

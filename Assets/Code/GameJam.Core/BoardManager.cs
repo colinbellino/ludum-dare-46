@@ -52,8 +52,11 @@ namespace GameJam.Core
 					}
 					else
 					{
-						var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == 0);
-						_highlightedCell.PlaceStructure(data);
+						if (_highlightedCell.CanConstruct())
+						{
+							var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == 0);
+							_highlightedCell.PlaceStructure(data);
+						}
 					}
 				}
 			}
@@ -65,15 +68,15 @@ namespace GameJam.Core
 
 			var tempBoard = new Dictionary<Vector2Int, Cell> {
 				{ new Vector2Int(0, 0), new Cell { Terrain = 1, Structure = 0, Fire = 1 } },
-				{ new Vector2Int(0, 1), new Cell { Terrain = 1, } },
-				{ new Vector2Int(0, 2), new Cell { Terrain = 1, } },
-				{ new Vector2Int(0, 3), new Cell { Terrain = 1, } },
-				{ new Vector2Int(0, 4), new Cell { Terrain = 1, Structure = 0 } },
-				{ new Vector2Int(0, 5), new Cell { Terrain = 1, Structure = 0 } },
-				{ new Vector2Int(0, 6), new Cell { Terrain = 1, Structure = 0 } },
-				{ new Vector2Int(0, 7), new Cell { Terrain = 1, Structure = 0 } },
-				{ new Vector2Int(0, 8), new Cell { Terrain = 1, Structure = 0 } },
-				{ new Vector2Int(0, 9), new Cell { Terrain = 1, Structure = 0 } },
+				{ new Vector2Int(0, 1), new Cell { Terrain = 0, } },
+				{ new Vector2Int(0, 2), new Cell { Terrain = 0, } },
+				{ new Vector2Int(0, 3), new Cell { Terrain = 0, } },
+				{ new Vector2Int(0, 4), new Cell { Terrain = 0, Structure = 0 } },
+				{ new Vector2Int(0, 5), new Cell { Terrain = 0, Structure = 0 } },
+				{ new Vector2Int(0, 6), new Cell { Terrain = 0, Structure = 0 } },
+				{ new Vector2Int(0, 7), new Cell { Terrain = 0, Structure = 0 } },
+				{ new Vector2Int(0, 8), new Cell { Terrain = 0, Structure = 0 } },
+				{ new Vector2Int(0, 9), new Cell { Terrain = 0, Structure = 0 } },
 
 				{ new Vector2Int(1, 0), new Cell { Terrain = 1, } },
 				{ new Vector2Int(1, 1), new Cell { Terrain = 1, } },
@@ -143,7 +146,7 @@ namespace GameJam.Core
 		{
 			foreach (var item in Board)
 			{
-				GameObject.DestroyImmediate(item.Value.gameObject);
+				Destroy(item.Value.gameObject);
 			}
 
 			Board.Clear();

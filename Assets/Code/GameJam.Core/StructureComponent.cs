@@ -15,7 +15,7 @@ namespace GameJam.Core
 
 			if (data.IsExit)
 			{
-				var exit = gameObject.AddComponent<ExitComponent>();
+				var exit = gameObject.AddComponent<ExitFlag>();
 			}
 		}
 
