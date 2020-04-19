@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17012bd6ad0508479ab595ff1e10005, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  AllLevels:
+  - {fileID: 11400000, guid: efb68e4e4ad14834383f2b962ce86be6, type: 2}
+  AllTerrains:
+  - {fileID: 11400000, guid: c6a4b08ce07bc0d42ab8e696bb499c96, type: 2}
+  - {fileID: 11400000, guid: 68d3900e2762b934c844286d479eb1bf, type: 2}
+  AllStructures:
+  - {fileID: 11400000, guid: 867a09169b23a3c4ea4758524ac9e5b3, type: 2}
+  - {fileID: 11400000, guid: b56fa7d2ca2106248aa14ebcb1f8ecd0, type: 2}
+  CellPrefab: {fileID: 8184246195814092991, guid: 9672e90fc3a9b074ab4c481009f7af45,
+    type: 3}
+  TerrainPrefab: {fileID: 3863392570520103573, guid: 6f04fc1aee414ad4b950a1b45f43b9a1,
+    type: 3}
+  StructurePrefab: {fileID: 3983120939467838052, guid: d4bf05e7b5f0e7a4b9fd9c86b72b7f1d,
+    type: 3}
+  FireSprite: {fileID: 1098286324429101383, guid: 35eb3ee4794c5e74da6dcb4a40ecdd97,
+    type: 3}

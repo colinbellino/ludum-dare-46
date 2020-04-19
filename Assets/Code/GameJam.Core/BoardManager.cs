@@ -12,10 +12,10 @@ namespace GameJam.Core
 		[SerializeField] [Required] private Level _currentLevel;
 
 		// Runtime
-		public Dictionary<Vector2Int, Cell> Board { get; } = new Dictionary<Vector2Int, Cell>();
+		public Dictionary<Vector2Int, CellComponent> Board { get; } = new Dictionary<Vector2Int, CellComponent>();
 		private EventSystem _eventSystem;
 		private Camera _camera;
-		private Cell _highlightedCell;
+		private CellComponent _highlightedCell;
 
 
 		private void Awake()
@@ -39,8 +39,16 @@ namespace GameJam.Core
 			{
 				if (_highlightedCell)
 				{
-					var content = _highlightedCell.Content == null ? 0 : -1; // -1 to clear the content
-					_highlightedCell.SetContent(content);
+					var structureToPlace = 0;
+					if (_highlightedCell.Structure)
+					{
+						_highlightedCell.DestroyStructure();
+					}
+					else
+					{
+
+						_highlightedCell.PlaceStructure(structureToPlace);
+					}
 				}
 			}
 		}
@@ -54,21 +62,20 @@ namespace GameJam.Core
 			}
 		}
 
-		private Cell GenerateCell(Vector2Int position, CellData authoringData)
+		private CellComponent GenerateCell(Vector2Int position, Cell cellData)
 		{
-			var prefab = Resources.Load<GameObject>("Prefabs/Cell");
 			var worldPosition = new Vector3(position.y, position.x, 0f);
 
-			var instance = Instantiate(prefab, worldPosition, Quaternion.identity);
+			var instance = Instantiate(GameSettings.Instance.CellPrefab, worldPosition, Quaternion.identity);
 			instance.name = $"Cell [{position.x},{position.y}]";
 
-			var cell = instance.GetComponent<Cell>();
-			cell.Initialize(position, authoringData);
+			var cell = instance.GetComponent<CellComponent>();
+			cell.Initialize(position, cellData);
 
 			return cell;
 		}
 
-		private Cell GetCellUnderMouseCursor()
+		private CellComponent GetCellUnderMouseCursor()
 		{
 			var mousePosition = Mouse.current.position.ReadValue();
 
@@ -83,7 +90,7 @@ namespace GameJam.Core
 				return null;
 			}
 
-			return hit.transform.GetComponent<Cell>();
+			return hit.transform.GetComponent<CellComponent>();
 		}
 	}
 }

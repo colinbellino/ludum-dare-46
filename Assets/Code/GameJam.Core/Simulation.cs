@@ -19,7 +19,7 @@ namespace GameJam.Core
 				new Vector2Int(-1, 0)
 			};
 
-		private List<Cell> _processedCells;
+		private List<CellComponent> _processedCells;
 
 		public void StartSimulation()
 		{
@@ -28,13 +28,13 @@ namespace GameJam.Core
 
 		private void Tick()
 		{
-			_processedCells = new List<Cell>();
+			_processedCells = new List<CellComponent>();
 
 			var cellsToProcess = _board.Board.Values.ToList().Where(IsBurning).ToList();
 
 			foreach (var cell in cellsToProcess)
 			{
-				if (cell.Content?.Fire < 1)
+				if (cell.Structure?.Fire < 1)
 				{
 					return;
 				}
@@ -47,7 +47,7 @@ namespace GameJam.Core
 					var destination = cell.Position + direction;
 					_board.Board.TryGetValue(destination, out var neighbour);
 
-					if (neighbour?.Content)
+					if (neighbour?.Structure)
 					{
 						TryToBurn(neighbour);
 					}
@@ -55,25 +55,25 @@ namespace GameJam.Core
 			}
 		}
 
-		private bool IsBurning(Cell cell, int index)
+		private bool IsBurning(CellComponent cell, int index)
 		{
-			return cell.Content?.Fire > 0;
+			return cell.Structure?.Fire > 0;
 		}
 
-		private void TryToBurn(Cell cell)
+		private void TryToBurn(CellComponent cell)
 		{
 			if (_processedCells.Contains(cell))
 			{
 				return;
 			}
 
-			cell.Content.AddFire(1);
+			cell.Structure.AddFire(1);
 			_processedCells.Add(cell);
 
 			var limit = 2; // Get this from content data
-			if (cell.Content.Fire > limit)
+			if (cell.Structure.Fire > limit)
 			{
-				cell.SetContent(-1);
+				cell.DestroyStructure();
 			}
 		}
 	}
