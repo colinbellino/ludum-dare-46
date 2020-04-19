@@ -15,7 +15,7 @@ namespace GameJam.Core
 
 		private StateMachine<States, Triggers> _machine;
 
-		public string StateName => _machine?.State.ToString();
+		[ShowInInspector] [ReadOnly] public string StateName => _machine?.State.ToString();
 
 		private void Start()
 		{
@@ -111,9 +111,10 @@ namespace GameJam.Core
 
 		// Use something like this to vizualize: http://www.webgraphviz.com/
 		[Button]
-		private void CopyGraph()
+		[DisableInEditorMode]
+		public void CopyGraph()
 		{
-			UnityEngine.Debug.Log("Graph data copied to clipboard!");
+			Debug.Log("Graph data copied to clipboard!");
 			GUIUtility.systemCopyBuffer = UmlDotGraph.Format(_machine.GetInfo());
 		}
 
