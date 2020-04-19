@@ -30,7 +30,6 @@ namespace GameJam.Core
 				.OnExit(MainMenuExit);
 
 			_gameState.Configure(States.Game)
-				.Permit(Triggers.ShowCredits, States.Credits)
 				.Permit(Triggers.ShowMenu, States.MainMenu)
 				.OnEntry(OnGameStart)
 				.OnExit(OnGameStop);
