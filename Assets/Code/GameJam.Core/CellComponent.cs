@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private FireComponent _fire;
 
 		public Vector2Int Position { get; private set; }
+		public event Action Burnt;
 
 		public void Initialize(Vector2Int position, Cell data)
 		{
@@ -50,6 +52,7 @@ namespace GameJam.Core
 			{
 				_fire.Extinguish();
 				DestroyStructure();
+				Burnt?.Invoke();
 			}
 		}
 

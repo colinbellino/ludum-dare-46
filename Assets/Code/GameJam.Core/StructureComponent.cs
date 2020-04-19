@@ -12,6 +12,11 @@ namespace GameJam.Core
 		public void Initialize(Structure data)
 		{
 			PlaceStructure(data);
+
+			if (data.IsExit)
+			{
+				var exit = gameObject.AddComponent<ExitComponent>();
+			}
 		}
 
 		public void PlaceStructure(Structure data)
@@ -28,6 +33,8 @@ namespace GameJam.Core
 
 		private void SetData(Structure data)
 		{
+			name = $"Structure ({data?.Name})";
+
 			if (data?.Sprite)
 			{
 				_renderer.sprite = data.Sprite;

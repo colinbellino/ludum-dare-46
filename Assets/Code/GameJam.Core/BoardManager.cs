@@ -17,13 +17,20 @@ namespace GameJam.Core
 		private Camera _camera;
 		private CellComponent _highlightedCell;
 
-
 		private void Awake()
 		{
-			GenerateBoard(_currentLevel);
-
 			_eventSystem = EventSystem.current;
 			_camera = Camera.main;
+		}
+
+		private void OnEnable()
+		{
+			GenerateBoard(_currentLevel);
+		}
+
+		private void OnDisable()
+		{
+			DestroyBoard();
 		}
 
 		private void Update()
@@ -61,15 +68,21 @@ namespace GameJam.Core
 			}
 		}
 
-		private CellComponent GenerateCell(Vector2Int position, Cell cellData)
+		private void DestroyBoard()
+		{
+			foreach (var item in Board)
+			{
+				GameObject.Destroy(item.Value.gameObject);
+			}
+		}
+
+		private CellComponent GenerateCell(Vector2Int position, Cell data)
 		{
 			var worldPosition = new Vector3(position.y, position.x, 0f);
 
-			var instance = Instantiate(GameSettings.Instance.CellPrefab, worldPosition, Quaternion.identity);
-			instance.name = $"Cell [{position.x},{position.y}]";
-
-			var cell = instance.GetComponent<CellComponent>();
-			cell.Initialize(position, cellData);
+			var cell = Instantiate(GameSettings.Instance.CellPrefab, worldPosition, Quaternion.identity);
+			cell.name = $"Cell [{position.x},{position.y}]";
+			cell.Initialize(position, data);
 
 			return cell;
 		}

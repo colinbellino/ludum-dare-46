@@ -9,7 +9,8 @@ namespace GameJam.Core
 
 		public void Initialize(Terrain data)
 		{
-			_renderer.name = $"Terrain ({data.Id})";
+			name = $"Terrain ({data.Id})";
+
 			_renderer.sprite = data.Sprite;
 		}
 	}

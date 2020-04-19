@@ -24,3 +24,4 @@ MonoBehaviour:
   Id: 1
   Name: Exit
   Sprite: {fileID: -1922979618149193216, guid: 371c15c37f2cd704db24fab9f80a5806, type: 3}
+  IsExit: 1

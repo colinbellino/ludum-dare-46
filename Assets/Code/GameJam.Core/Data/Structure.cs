@@ -9,6 +9,6 @@ namespace GameJam.Core
 		public int Id;
 		public string Name;
 		public Sprite Sprite;
-		// public GameObject Model;
+		public bool IsExit;
 	}
 }
