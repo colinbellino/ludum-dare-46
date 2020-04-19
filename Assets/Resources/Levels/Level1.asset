@@ -45,7 +45,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -57,7 +57,7 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 3
-      Data: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -101,7 +101,7 @@ MonoBehaviour:
       Data: 4|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -134,10 +134,10 @@ MonoBehaviour:
       Data: 5|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -167,10 +167,10 @@ MonoBehaviour:
       Data: 6|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -200,10 +200,10 @@ MonoBehaviour:
       Data: 7|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -233,7 +233,7 @@ MonoBehaviour:
       Data: 8|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
       Data: 9|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
       Data: 10|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
       Data: 11|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
       Data: 12|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
       Data: 13|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -431,10 +431,10 @@ MonoBehaviour:
       Data: 14|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -464,10 +464,10 @@ MonoBehaviour:
       Data: 15|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -497,10 +497,10 @@ MonoBehaviour:
       Data: 16|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -530,10 +530,10 @@ MonoBehaviour:
       Data: 17|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
       Data: 18|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -596,7 +596,7 @@ MonoBehaviour:
       Data: 19|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -629,7 +629,7 @@ MonoBehaviour:
       Data: 20|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
       Data: 21|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -695,7 +695,7 @@ MonoBehaviour:
       Data: 22|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
       Data: 23|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -761,10 +761,10 @@ MonoBehaviour:
       Data: 24|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -794,10 +794,10 @@ MonoBehaviour:
       Data: 25|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
       Data: 26|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -860,10 +860,10 @@ MonoBehaviour:
       Data: 27|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -893,10 +893,10 @@ MonoBehaviour:
       Data: 28|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -926,10 +926,10 @@ MonoBehaviour:
       Data: 29|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -959,10 +959,10 @@ MonoBehaviour:
       Data: 30|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -992,10 +992,10 @@ MonoBehaviour:
       Data: 31|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1025,10 +1025,10 @@ MonoBehaviour:
       Data: 32|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1058,10 +1058,10 @@ MonoBehaviour:
       Data: 33|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1091,10 +1091,10 @@ MonoBehaviour:
       Data: 34|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1124,10 +1124,10 @@ MonoBehaviour:
       Data: 35|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1157,7 +1157,7 @@ MonoBehaviour:
       Data: 36|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -1190,10 +1190,10 @@ MonoBehaviour:
       Data: 37|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1223,10 +1223,10 @@ MonoBehaviour:
       Data: 38|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1256,10 +1256,10 @@ MonoBehaviour:
       Data: 39|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1289,10 +1289,10 @@ MonoBehaviour:
       Data: 40|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1322,10 +1322,10 @@ MonoBehaviour:
       Data: 41|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1355,10 +1355,10 @@ MonoBehaviour:
       Data: 42|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1388,10 +1388,10 @@ MonoBehaviour:
       Data: 43|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1421,10 +1421,10 @@ MonoBehaviour:
       Data: 44|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1454,10 +1454,10 @@ MonoBehaviour:
       Data: 45|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1487,7 +1487,7 @@ MonoBehaviour:
       Data: 46|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
       Data: 47|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -1553,10 +1553,10 @@ MonoBehaviour:
       Data: 48|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1586,10 +1586,10 @@ MonoBehaviour:
       Data: 49|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1619,10 +1619,10 @@ MonoBehaviour:
       Data: 50|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1652,10 +1652,10 @@ MonoBehaviour:
       Data: 51|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1685,10 +1685,10 @@ MonoBehaviour:
       Data: 52|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1718,10 +1718,10 @@ MonoBehaviour:
       Data: 53|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1751,10 +1751,10 @@ MonoBehaviour:
       Data: 54|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1784,10 +1784,10 @@ MonoBehaviour:
       Data: 55|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1817,7 +1817,7 @@ MonoBehaviour:
       Data: 56|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -1850,7 +1850,7 @@ MonoBehaviour:
       Data: 57|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
       Data: 0
@@ -1883,10 +1883,10 @@ MonoBehaviour:
       Data: 58|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1916,10 +1916,10 @@ MonoBehaviour:
       Data: 59|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1949,10 +1949,10 @@ MonoBehaviour:
       Data: 60|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1982,10 +1982,10 @@ MonoBehaviour:
       Data: 61|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -2015,10 +2015,10 @@ MonoBehaviour:
       Data: 62|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -2048,10 +2048,10 @@ MonoBehaviour:
       Data: 63|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0

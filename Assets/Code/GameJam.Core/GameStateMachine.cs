@@ -9,6 +9,7 @@ namespace GameJam.Core
 	{
 		[SerializeField] [Required] private BoardManager _boardManager;
 		[SerializeField] [Required] private Simulation _simulationManager;
+		[SerializeField] [Required] private Sounds _sounds;
 		[SerializeField] [Required] private GameObject _mainMenuUi;
 		[SerializeField] [Required] private GameObject _prepareHud;
 		[SerializeField] [Required] private GameObject _backToMenuButton;
@@ -77,10 +78,12 @@ namespace GameJam.Core
 					.Permit(Triggers.Lose, States.GameLose)
 					.OnEntry(() =>
 					{
+						_sounds.PlaySimulationMusic();
 						_simulationManager.StartSimulation();
 					})
 					.OnExit(() =>
 					{
+						_sounds.PlayBackgroundMusic();
 						_simulationManager.StopSimulation();
 					});
 
