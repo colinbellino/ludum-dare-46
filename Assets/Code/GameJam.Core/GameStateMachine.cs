@@ -13,6 +13,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _mainMenuUi;
 		[SerializeField] [Required] private GameObject _prepareHud;
 		[SerializeField] [Required] private GameObject _backToMenuButton;
+		[SerializeField] [Required] private GameObject _gameOverMenu;
 
 		private StateMachine<States, Triggers> _machine;
 
@@ -90,9 +91,14 @@ namespace GameJam.Core
 				_machine.Configure(States.GameWin)
 					.SubstateOf(States.Game)
 					.Permit(Triggers.StartGame, States.GamePrepare)
+					.Permit(Triggers.ShowTitle, States.MainMenu)
 					.OnEntry(() =>
 					{
-						_machine.Fire(Triggers.StartGame);
+						_gameOverMenu.SetActive(true);
+					})
+					.OnExit(() =>
+					{
+						_gameOverMenu.SetActive(false);
 					});
 
 				_machine.Configure(States.GameLose)
