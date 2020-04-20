@@ -18,6 +18,7 @@ namespace GameJam.Core
 		{
 			_name.text = data.Name;
 			_image.sprite = data.Sprite;
+			_image.SetNativeSize();
 			_quantity.text = quantity.ToString();
 			_button.onClick.AddListener(() => _onActionClick?.Invoke());
 		}
