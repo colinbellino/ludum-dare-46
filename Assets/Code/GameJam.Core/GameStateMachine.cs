@@ -14,6 +14,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _prepareHud;
 		[SerializeField] [Required] private GameObject _backToMenuButton;
 		[SerializeField] [Required] private GameObject _gameOverMenu;
+		[SerializeField] [Required] private GameObject _creditsPage;
 
 		private StateMachine<States, Triggers> _machine;
 
@@ -111,7 +112,15 @@ namespace GameJam.Core
 			}
 
 			_machine.Configure(States.Credits)
-				.Permit(Triggers.ShowTitle, States.MainMenu);
+				.Permit(Triggers.ShowTitle, States.MainMenu)
+				.OnEntry(() =>
+				{
+					_creditsPage.SetActive(true);
+				})
+				.OnExit(() =>
+				{
+					_creditsPage.SetActive(false);
+				});
 
 			_machine.Configure(States.Quit)
 				.OnEntry(QuitEnter);
@@ -131,6 +140,8 @@ namespace GameJam.Core
 		public void PlayTheGame() => _machine.Fire(Triggers.StartGame);
 
 		public void StartSimulation() => _machine.Fire(Triggers.StartSimulation);
+
+		public void ShowCredits() => _machine.Fire(Triggers.ShowCredits);
 
 		public void QuitGame()
 		{
