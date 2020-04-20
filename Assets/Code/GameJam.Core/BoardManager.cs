@@ -15,6 +15,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private AudioSource _audioSource;
 		[SerializeField] [Required] private AudioClip _cantPlaceClip;
 		[SerializeField] [Required] private AudioClip _placeClip;
+		[SerializeField] [Required] private AudioClip _removeClip;
 
 		// Runtime
 		private EventSystem _eventSystem;
@@ -96,6 +97,7 @@ namespace GameJam.Core
 				if (canDestroyCell)
 				{
 					DestroyHightlightedStructure();
+					_audioSource.PlayOneShot(_removeClip);
 				}
 				else
 				{
