@@ -6,7 +6,7 @@ namespace GameJam.Core
 	public class FireComponent : MonoBehaviour
 	{
 		[SerializeField] [Required] private SpriteRenderer _renderer;
-		[SerializeField] [Required] private Sprite[] _fireSprites;
+		[SerializeField] [Required] private Animator _animator;
 
 		public int Amount { get; private set; }
 
@@ -18,15 +18,7 @@ namespace GameJam.Core
 
 		private void UpdateFireRenderer()
 		{
-			if (Amount > 0)
-			{
-				var index = Mathf.Min(Amount - 1, _fireSprites.Length - 1);
-				_renderer.sprite = _fireSprites[index];
-			}
-			else
-			{
-				_renderer.sprite = null;
-			}
+			_animator.enabled = Amount > 0;
 		}
 
 		public void Kindle()
