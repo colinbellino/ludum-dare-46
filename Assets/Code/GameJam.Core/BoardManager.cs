@@ -11,7 +11,6 @@ namespace GameJam.Core
 	public class BoardManager : MonoBehaviour
 	{
 		// Authoring
-		[SerializeField] [Required] private List<Level> _levelsList;
 		[SerializeField] [Required] private AudioSource _audioSource;
 		[SerializeField] [Required] private AudioClip _cantPlaceClip;
 		[SerializeField] [Required] private AudioClip _placeClip;
@@ -19,6 +18,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private SpriteRenderer _marker;
 
 		// Runtime
+		private List<Level> _levels;
 		private EventSystem _eventSystem;
 		private Camera _camera;
 		public Dictionary<Vector2Int, CellComponent> Board { get; } = new Dictionary<Vector2Int, CellComponent>();
@@ -34,6 +34,7 @@ namespace GameJam.Core
 
 		private void Awake()
 		{
+			_levels = GameSettings.Instance.AllLevels;
 			_eventSystem = EventSystem.current;
 			_camera = Camera.main;
 		}
@@ -64,7 +65,7 @@ namespace GameJam.Core
 
 		public void Activate()
 		{
-			_currentLevel = _levelsList[_currentLevelIndex % _levelsList.Count];
+			_currentLevel = _levels[_currentLevelIndex % _levels.Count];
 			LoadLevel(_currentLevel);
 			_interactive = true;
 		}
@@ -176,7 +177,7 @@ namespace GameJam.Core
 		{
 			_currentLevelIndex++;
 
-			return _currentLevelIndex == _levelsList.Count;
+			return _currentLevelIndex == _levels.Count;
 		}
 
 		public void ResetLevelIndex()

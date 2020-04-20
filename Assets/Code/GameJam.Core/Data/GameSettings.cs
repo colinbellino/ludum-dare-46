@@ -13,7 +13,7 @@ namespace GameJam.Core
 	[GlobalConfig("Assets/Resources", UseAsset = true)]
 	public class GameSettings : GlobalConfig<GameSettings>
 	{
-		[ReadOnly]
+		// [ReadOnly]
 		[ListDrawerSettings(Expanded = true)]
 		public List<Level> AllLevels;
 
@@ -37,9 +37,9 @@ namespace GameJam.Core
 		[Button(ButtonSizes.Medium), PropertyOrder(-1)]
 		public void UpdateGameSettings()
 		{
-			AllLevels = AssetDatabase.FindAssets($"t:{typeof(Level).FullName}")
-				.Select(guid => AssetDatabase.LoadAssetAtPath<Level>(AssetDatabase.GUIDToAssetPath(guid)))
-				.ToList();
+			// AllLevels = AssetDatabase.FindAssets($"t:{typeof(Level).FullName}")
+			// 	.Select(guid => AssetDatabase.LoadAssetAtPath<Level>(AssetDatabase.GUIDToAssetPath(guid)))
+			// 	.ToList();
 
 			AllTerrains = AssetDatabase.FindAssets($"t:{typeof(Terrain).FullName}")
 				.Select(guid => AssetDatabase.LoadAssetAtPath<Terrain>(AssetDatabase.GUIDToAssetPath(guid)))
