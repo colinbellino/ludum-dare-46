@@ -80,7 +80,7 @@ namespace GameJam.Core
 					yield break;
 				}
 
-				if (_leftToBurnCell.Count == 1 && _leftToBurnCell[0].HasComponent<ExitFlag>())
+				if (_leftToBurnCell.Where(cell => cell.HasComponent<ExitFlag>() == true).ToList().Count == _leftToBurnCell.Count)
 				{
 					GameEvents.WinGame();
 					yield break;
