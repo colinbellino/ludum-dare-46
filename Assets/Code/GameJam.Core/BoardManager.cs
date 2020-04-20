@@ -154,9 +154,11 @@ namespace GameJam.Core
 			}
 		}
 
-		public void NextLevelIndex()
+		public bool NextLevelIndex()
 		{
 			_currentLevelIndex++;
+
+			return _currentLevelIndex == _levelsList.Count;
 		}
 
 		public void ResetLevelIndex()
