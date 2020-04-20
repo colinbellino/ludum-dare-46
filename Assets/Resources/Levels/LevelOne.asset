@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aee9f8079a1b9254085be872cad39a68, type: 3}
-  m_Name: Tuto 3
+  m_Name: LevelOne
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -124,7 +124,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 9
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -817,10 +817,10 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 0
+      Data: 9
     - Name: Fire
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -850,7 +850,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -883,7 +883,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 9
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -949,7 +949,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 9
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -982,7 +982,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 99
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1015,7 +1015,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1114,7 +1114,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1246,7 +1246,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 9
+      Data: 99
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1477,7 +1477,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 9
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1543,7 +1543,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1576,7 +1576,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 0
+      Data: -1
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1609,7 +1609,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1642,7 +1642,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1675,7 +1675,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1708,7 +1708,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -1741,10 +1741,10 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 0
     - Name: Fire
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -1906,7 +1906,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0

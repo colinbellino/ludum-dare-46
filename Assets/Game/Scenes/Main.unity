@@ -903,6 +903,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1420f1400f4984d0eb96cba5899763b1, type: 2}
   - {fileID: 11400000, guid: 1fd544d1b9dfa4fed947167a4d40a667, type: 2}
   - {fileID: 11400000, guid: 82407006c246345c885019d0ab9a21a3, type: 2}
+  - {fileID: 11400000, guid: 630f7ebe9e0fc437d8d1059fbe83579a, type: 2}
+  - {fileID: 11400000, guid: 8c09a5e3f3c9a4106905b2405dd2c4c9, type: 2}
   _audioSource: {fileID: 848055501}
   _cantPlaceClip: {fileID: 8300000, guid: 08c2afcca25f9d646ac16428cdeee44c, type: 3}
   _placeClip: {fileID: 8300000, guid: d7bf10202fb7b43f2a2e63dc28b20581, type: 3}
