@@ -11,6 +11,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private AudioClip _looseClip;
 		[SerializeField] [Required] private AudioClip _winClip;
 		[SerializeField] [Required] private AudioClip _structureIgniteClip;
+		private bool _isMuted = false;
 
 		public void PlaySimulationMusic()
 		{
@@ -40,6 +41,13 @@ namespace GameJam.Core
 		public void PlayButtonClip()
 		{
 			_audioSourceButtons.Play();
+		}
+
+		public void MuteUnMute()
+		{
+			_isMuted = !_isMuted;
+
+			AudioListener.pause = _isMuted;
 		}
 	}
 }
