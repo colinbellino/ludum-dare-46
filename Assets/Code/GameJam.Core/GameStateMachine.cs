@@ -82,6 +82,7 @@ namespace GameJam.Core
 					{
 						_sounds.PlaySimulationMusic();
 						_simulationManager.StartSimulation();
+						_boardManager.DisableInteractions();
 					})
 					.OnExit(() =>
 					{

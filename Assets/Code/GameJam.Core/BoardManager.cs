@@ -22,6 +22,7 @@ namespace GameJam.Core
 		private int _selectedStructureIndex;
 		private Level _currentLevel;
 		private int _currentLevelIndex = 0;
+		private bool _interactive;
 
 		public event Action<Dictionary<Structure, int>> AvailableStructuresChanged;
 		public event Action<(int, int)> AvailableStructureQuantityChanged;
@@ -32,10 +33,25 @@ namespace GameJam.Core
 			_camera = Camera.main;
 		}
 
+		private void Update()
+		{
+			if (_interactive)
+			{
+				_highlightedCell = GetCellUnderMouseCursor();
+				HandleInputs();
+			}
+		}
+
 		public void Activate()
 		{
-			 _currentLevel = _levelsList[_currentLevelIndex % _levelsList.Count];
+			_currentLevel = _levelsList[_currentLevelIndex % _levelsList.Count];
 			LoadLevel(_currentLevel);
+			_interactive = true;
+		}
+
+		public void DisableInteractions()
+		{
+			_interactive = false;
 		}
 
 		public void Deactivate()
@@ -55,13 +71,6 @@ namespace GameJam.Core
 			}
 
 			_selectedStructureIndex = GameSettings.Instance.AllStructures.FindIndex(structure => structure.Id == id);
-		}
-
-		private void Update()
-		{
-			_highlightedCell = GetCellUnderMouseCursor();
-
-			HandleInputs();
 		}
 
 		private void HandleInputs()
