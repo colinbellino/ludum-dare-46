@@ -2051,7 +2051,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 99
     - Name: Fire
       Entry: 3
       Data: 0

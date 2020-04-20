@@ -18,6 +18,11 @@ namespace GameJam.Core
 			{
 				var exit = gameObject.AddComponent<ExitFlag>();
 			}
+
+			if (data.Unburnable)
+			{
+				var unburnable = gameObject.AddComponent<UnburnableFlag>();
+			}
 		}
 
 		public void PlaceStructure(Structure data)

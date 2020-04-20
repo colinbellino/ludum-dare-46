@@ -12,11 +12,6 @@ namespace GameJam.Core
 			name = $"Terrain ({data.Id})";
 
 			_renderer.sprite = data.Sprite;
-
-			if (data.Unconstructible)
-			{
-				var fertile = gameObject.AddComponent<UnconstructibleFlag>();
-			}
 		}
 	}
 }

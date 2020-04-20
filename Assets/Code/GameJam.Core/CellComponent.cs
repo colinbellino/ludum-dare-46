@@ -47,7 +47,7 @@ namespace GameJam.Core
 		// 🎩
 		public bool CanConstruct()
 		{
-			return HasComponent<UnconstructibleFlag>() == false && _structure.IsActive == false;
+			return _structure.IsActive == false;
 		}
 
 		// 🤠
@@ -60,20 +60,25 @@ namespace GameJam.Core
 
 		public bool Burn()
 		{
-			var isBurnt = false;
+			if (HasComponent<UnburnableFlag>())
+			{
+				return false;
+			}
+
 			_fire.Kindle();
 
 			// TODO: Get this from content data
 			var limit = 2;
-			if (_fire.Amount > limit)
+			if (_fire.Amount <= limit)
 			{
-				_fire.Extinguish();
-				DestroyStructure();
-				Burnt?.Invoke();
-				isBurnt = true;
+				return false;
 			}
 
-			return isBurnt;
+			_fire.Extinguish();
+			DestroyStructure();
+			Burnt?.Invoke();
+
+			return true;
 		}
 
 		public override string ToString()

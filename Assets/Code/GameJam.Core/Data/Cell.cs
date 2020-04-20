@@ -8,7 +8,7 @@ namespace GameJam.Core
 	{
 		[HorizontalGroup("split")]
 		[VerticalGroup("split/a"), LabelWidth(50)]
-		public int Terrain = -1;
+		public int Terrain = 1;
 
 		[VerticalGroup("split/b"), LabelWidth(50)]
 		public int Structure = -1;

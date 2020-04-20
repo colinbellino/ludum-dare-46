@@ -134,7 +134,7 @@ MonoBehaviour:
       Data: 5|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: -1
@@ -167,7 +167,7 @@ MonoBehaviour:
       Data: 6|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: -1
@@ -200,7 +200,7 @@ MonoBehaviour:
       Data: 7|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: -1
@@ -233,7 +233,7 @@ MonoBehaviour:
       Data: 8|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
       Data: 9|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
       Data: 10|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
       Data: 11|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
       Data: 12|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
       Data: 13|GameJam.Core.Cell, GameJam.Core
     - Name: Terrain
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Structure
       Entry: 3
       Data: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: -1
+      Data: 9
     - Name: Fire
       Entry: 3
       Data: 0
@@ -2051,7 +2051,7 @@ MonoBehaviour:
       Data: 1
     - Name: Structure
       Entry: 3
-      Data: 1
+      Data: 99
     - Name: Fire
       Entry: 3
       Data: 0

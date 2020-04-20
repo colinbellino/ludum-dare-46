@@ -10,5 +10,6 @@ namespace GameJam.Core
 		public string Name;
 		public Sprite Sprite;
 		public bool IsExit;
+		public bool Unburnable;
 	}
 }
