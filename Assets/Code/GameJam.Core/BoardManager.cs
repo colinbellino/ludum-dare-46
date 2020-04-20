@@ -66,20 +66,20 @@ namespace GameJam.Core
 		public void SelectStructure(int id)
 		{
 			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == id);
-			if (_structuresAvailable[data] <= 0)
-			{
-				Debug.LogWarning($"You can't select \"{data.Name}\" DOOD.");
-				return;
-			}
-
 			_selectedStructureIndex = GameSettings.Instance.AllStructures.FindIndex(structure => structure.Id == id);
 		}
 
 		private void HandleInputs()
 		{
+			if (_highlightedCell == null)
+			{
+				return;
+			}
+
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 			{
-				if (PlaceSelectedStructure() == false)
+				var cantPlaceCell = PlaceSelectedStructure() == false;
+				if (cantPlaceCell)
 				{
 					_audioSource.PlayOneShot(_cantPlaceClip);
 				}
@@ -87,9 +87,14 @@ namespace GameJam.Core
 
 			if (Mouse.current.rightButton.wasPressedThisFrame)
 			{
-				if (_highlightedCell?.CanDestroy() == true)
+				var canDestroyCell = _highlightedCell?.CanDestroy() == true;
+				if (canDestroyCell)
 				{
 					DestroyHightlightedStructure();
+				}
+				else
+				{
+					_audioSource.PlayOneShot(_cantPlaceClip);
 				}
 			}
 		}
