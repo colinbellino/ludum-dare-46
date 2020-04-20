@@ -10,7 +10,7 @@ namespace GameJam.Core
 		{
 			_animator = Instantiate(GameSettings.Instance.BonfireAnimatorPrefab, transform);
 			_animator.transform.localPosition = new Vector3(0, -0.075f, 0);
-			_animator.GetComponent<SpriteRenderer>().sortingOrder = GetComponentInChildren<SpriteRenderer>().sortingOrder;
+			_animator.GetComponent<SpriteRenderer>().sortingOrder = GetComponentInParent<CellComponent>().SortingOrder;
 		}
 
 		private void OnDisable()

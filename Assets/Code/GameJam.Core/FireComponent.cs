@@ -21,6 +21,7 @@ namespace GameJam.Core
 			if (Amount > 0)
 			{
 				_animator.enabled = true;
+				_renderer.sortingOrder = GetComponentInParent<CellComponent>().SortingOrder + 2;
 			}
 			else
 			{

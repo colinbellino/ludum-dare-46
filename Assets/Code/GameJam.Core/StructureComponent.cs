@@ -30,7 +30,7 @@ namespace GameJam.Core
 		{
 			SetData(data);
 			IsActive = true;
-			_renderer.sortingOrder = -position.x;
+			_renderer.sortingOrder = GetComponentInParent<CellComponent>().SortingOrder;
 		}
 
 		public void DestroyStructure()

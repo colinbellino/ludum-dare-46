@@ -53,7 +53,7 @@ namespace GameJam.Core
 						_highlightedCell.Position.x,
 						0f
 					);
-					_marker.sortingOrder = -_highlightedCell.Position.x - 1;
+					_marker.sortingOrder = _highlightedCell.SortingOrder - 1;
 				}
 				else
 				{

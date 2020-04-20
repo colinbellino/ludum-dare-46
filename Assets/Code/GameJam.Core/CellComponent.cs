@@ -16,11 +16,14 @@ namespace GameJam.Core
 		private Cell _data;
 
 		public int StructureId => _structure.Id;
+		public int SortingOrder { get; private set; }
 
 		public void Initialize(Vector2Int position, Cell data)
 		{
 			_data = data;
 			Position = position;
+
+			SortingOrder = Position.x * -10;
 
 			if (data.Terrain > -1)
 			{
