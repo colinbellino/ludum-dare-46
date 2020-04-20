@@ -16,6 +16,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private AudioClip _cantPlaceClip;
 		[SerializeField] [Required] private AudioClip _placeClip;
 		[SerializeField] [Required] private AudioClip _removeClip;
+		[SerializeField] [Required] private SpriteRenderer _marker;
 
 		// Runtime
 		private EventSystem _eventSystem;
@@ -42,7 +43,22 @@ namespace GameJam.Core
 			if (_interactive)
 			{
 				_highlightedCell = GetCellUnderMouseCursor();
+
 				HandleInputs();
+
+				if (_highlightedCell)
+				{
+					_marker.transform.localPosition = new Vector3(
+						_highlightedCell.Position.y,
+						_highlightedCell.Position.x,
+						0f
+					);
+					_marker.sortingOrder = -_highlightedCell.Position.x - 1;
+				}
+				else
+				{
+					_marker.transform.localPosition = new Vector3(99999, 0, 0);
+				}
 			}
 		}
 
