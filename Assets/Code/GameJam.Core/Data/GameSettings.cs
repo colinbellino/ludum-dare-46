@@ -31,7 +31,7 @@ namespace GameJam.Core
 
 		[Required]
 		[AssetsOnly]
-		public Animator FireAnimator;
+		public Animator BonfireAnimatorPrefab;
 
 #if UNITY_EDITOR
 		[Button(ButtonSizes.Medium), PropertyOrder(-1)]

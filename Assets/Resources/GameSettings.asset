@@ -29,5 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 867a09169b23a3c4ea4758524ac9e5b3, type: 2}
   CellPrefab: {fileID: 8184246195814092991, guid: 9672e90fc3a9b074ab4c481009f7af45,
     type: 3}
-  FireAnimator: {fileID: 2848810170268902540, guid: c7b9d05b7371ea54d8555c61b8ef028c,
+  BonfireAnimatorPrefab: {fileID: 2848810170268902540, guid: 57e735d2efef30544853a65f155a7182,
     type: 3}

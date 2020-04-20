@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2848810170268902539}
   - component: {fileID: 2848810170268902540}
   m_Layer: 0
-  m_Name: Fire Sprite
+  m_Name: Bonfire Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 80347497
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 999
   m_Sprite: {fileID: 6347171218314292929, guid: 2e9d898ec00bac447853b50acdf8e9b9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 2848810170268902541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ee117945d2a6acd48bd4fa432c21ddd5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 396393f061293eb449fbf8e3c456b26c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
