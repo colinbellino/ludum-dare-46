@@ -5,25 +5,22 @@ namespace GameJam.Core
 {
 	public class Sounds : MonoBehaviour
 	{
-		[SerializeField] [Required] private AudioClip _backgroundMusic;
-		[SerializeField] [Required] private AudioClip _simulationMusic;
-		[SerializeField] [Required] private AudioSource _audioSource;
-
-		private void Awake()
-		{
-			_audioSource.clip = _backgroundMusic;
-		}
+		[SerializeField] [Required] private AudioSource _audioSourceFireBackground;
+		[SerializeField] [Required] private AudioSource _audioSourceFireIgnite;
 
 		public void PlaySimulationMusic()
 		{
-			_audioSource.clip = _simulationMusic;
-			_audioSource.Play();
+			_audioSourceFireBackground.Play();
 		}
 
 		public void PlayBackgroundMusic()
 		{
-			_audioSource.clip = _backgroundMusic;
-			_audioSource.Play();
+			_audioSourceFireBackground.Stop();
+		}
+
+		public void PlayFireIgniteSound()
+		{
+			_audioSourceFireIgnite.Play();
 		}
 	}
 }

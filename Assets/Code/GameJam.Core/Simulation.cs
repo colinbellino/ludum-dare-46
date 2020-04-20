@@ -11,6 +11,7 @@ namespace GameJam.Core
 		[SerializeField]
 		[Required]
 		private BoardManager _board;
+		[SerializeField] [Required] private Sounds _sounds;
 
 		private Vector2Int[] _directions = new Vector2Int[4]
 			{
@@ -75,6 +76,8 @@ namespace GameJam.Core
 					GameEvents.LoseGame();
 					yield break;
 				}
+
+				_sounds.PlayFireIgniteSound();
 
 				yield return new WaitForSeconds(_tickInterval);
 			}
