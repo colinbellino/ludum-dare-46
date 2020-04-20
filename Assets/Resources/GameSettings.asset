@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllLevels:
   - {fileID: 11400000, guid: efb68e4e4ad14834383f2b962ce86be6, type: 2}
-  - {fileID: 11400000, guid: d2a9da3009f37411abac493d6527128a, type: 2}
+  - {fileID: 11400000, guid: 1420f1400f4984d0eb96cba5899763b1, type: 2}
+  - {fileID: 11400000, guid: 1fd544d1b9dfa4fed947167a4d40a667, type: 2}
   AllTerrains:
   - {fileID: 11400000, guid: c6a4b08ce07bc0d42ab8e696bb499c96, type: 2}
   AllStructures:

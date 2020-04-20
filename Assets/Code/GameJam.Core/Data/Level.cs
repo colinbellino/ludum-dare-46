@@ -9,6 +9,11 @@ namespace GameJam.Core
 	{
 		public Dictionary<Structure, int> Structures = new Dictionary<Structure, int>();
 
+		// Start : 	{ Structure = 0, Fire = 1 }
+		// Tree :	{ Structure = 0 }
+		// Rock : 	{ Structure = 9 }
+		// Exit : 	{ Structure = 99 }
+
 		[DictionaryDrawerSettings(DisplayMode = DictionaryDisplayOptions.OneLine, IsReadOnly = true)]
 		public Dictionary<Vector2Int, Cell> Board = new Dictionary<Vector2Int, Cell> {
 			{ new Vector2Int(0, 0), new Cell { Structure = 0, Fire = 1 } },
