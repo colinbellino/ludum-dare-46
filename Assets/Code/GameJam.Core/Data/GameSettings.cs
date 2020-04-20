@@ -29,6 +29,10 @@ namespace GameJam.Core
 		[AssetsOnly]
 		public CellComponent CellPrefab;
 
+		[Required]
+		[AssetsOnly]
+		public Animator FireAnimator;
+
 #if UNITY_EDITOR
 		[Button(ButtonSizes.Medium), PropertyOrder(-1)]
 		public void UpdateGameSettings()

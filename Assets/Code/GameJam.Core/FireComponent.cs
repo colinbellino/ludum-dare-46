@@ -18,7 +18,15 @@ namespace GameJam.Core
 
 		private void UpdateFireRenderer()
 		{
-			_animator.enabled = Amount > 0;
+			if (Amount > 0)
+			{
+				_animator.enabled = true;
+			}
+			else
+			{
+				_animator.enabled = false;
+				_renderer.sprite = null;
+			}
 		}
 
 		public void Kindle()
