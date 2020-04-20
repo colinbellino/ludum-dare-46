@@ -7,6 +7,7 @@ namespace GameJam.Core
 	{
 		[SerializeField] [Required] private AudioSource _audioSourceFireBackground;
 		[SerializeField] [Required] private AudioSource _audioSourceFireIgnite;
+		[SerializeField] [Required] private AudioSource _audioSourceButtons;
 		[SerializeField] [Required] private AudioClip _looseClip;
 		[SerializeField] [Required] private AudioClip _winClip;
 		[SerializeField] [Required] private AudioClip _structureIgniteClip;
@@ -34,6 +35,11 @@ namespace GameJam.Core
 		public void PlayWinClip()
 		{
 			_audioSourceFireIgnite.PlayOneShot(_winClip);
+		}
+
+		public void PlayButtonClip()
+		{
+			_audioSourceButtons.Play();
 		}
 	}
 }
