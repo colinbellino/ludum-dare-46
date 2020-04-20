@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035156, y: 300}
+  m_AnchoredPosition: {x: 0.000061035156, y: 250}
   m_SizeDelta: {x: 1920, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343418968
@@ -728,6 +728,7 @@ GameObject:
   - component: {fileID: 575299031}
   - component: {fileID: 575299033}
   - component: {fileID: 575299032}
+  - component: {fileID: 575299034}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -773,7 +774,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Made by :\n  \xB7 Colin Bellino (@colinbellino)\n  \xB7 Romain HUC"
+  m_text: "Made by :\n  \xB7 <link=\"https://twitter.com/colinbellino\">Colin Bellino
+    (@colinbellino</link>\n  \xB7 Romain HUC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 58623ea1eb77b4a5e92f3a8328c0bd80, type: 2}
   m_sharedMaterial: {fileID: -5865162911567399238, guid: 58623ea1eb77b4a5e92f3a8328c0bd80,
@@ -819,7 +821,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 44
+  m_firstOverflowCharacterIndex: 43
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -843,11 +845,11 @@ MonoBehaviour:
   m_margin: {x: 544.0014, y: 0, z: 3.0300295, w: 779.6135}
   m_textInfo:
     textComponent: {fileID: 575299032}
-    characterCount: 58
+    characterCount: 57
     spriteCount: 0
     spaceCount: 13
     wordCount: 7
-    linkCount: 0
+    linkCount: 1
     lineCount: 3
     pageCount: 1
     materialCount: 2
@@ -874,6 +876,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575299030}
   m_CullTransparentMesh: 0
+--- !u!114 &575299034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575299030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec57a1d3f62b1984d87fccdcd348a8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doesColorChangeOnHover: 1
+  hoverColor: {r: 0.32941177, g: 0.57254905, b: 0.28235295, a: 1}
 --- !u!1 &791836569
 GameObject:
   m_ObjectHideFlags: 0
