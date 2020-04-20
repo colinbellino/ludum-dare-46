@@ -20,7 +20,7 @@ namespace GameJam.Core
 				new Vector2Int(1, 0),
 				new Vector2Int(-1, 0)
 			};
-		private const float _tickInterval = 0.5f;
+		private const float _tickInterval = 0.35f;
 
 		private List<CellComponent> _processedCells;
 		private List<CellComponent> _leftToBurnCell;
