@@ -30,7 +30,7 @@ namespace GameJam.Core
 			if (data.Structure > -1)
 			{
 				var structure = GameSettings.Instance.AllStructures.Find(t => t.Id == data.Structure);
-				_structure.Initialize(structure);
+				_structure.Initialize(structure, position);
 			}
 
 			_fire.Initialize(data.Fire);
@@ -38,7 +38,7 @@ namespace GameJam.Core
 
 		public bool HasStructure() => _structure.IsActive;
 
-		public void PlaceStructure(Structure structure) => _structure.PlaceStructure(structure);
+		public void PlaceStructure(Structure structure) => _structure.PlaceStructure(structure, Position);
 
 		public void DestroyStructure() => _structure.DestroyStructure();
 

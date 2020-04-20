@@ -10,9 +10,9 @@ namespace GameJam.Core
 		public bool IsActive { get; private set; }
 		public int Id { get; private set; }
 
-		public void Initialize(Structure data)
+		public void Initialize(Structure data, Vector2Int position)
 		{
-			PlaceStructure(data);
+			PlaceStructure(data, position);
 
 			if (data.IsExit)
 			{
@@ -25,10 +25,11 @@ namespace GameJam.Core
 			}
 		}
 
-		public void PlaceStructure(Structure data)
+		public void PlaceStructure(Structure data, Vector2Int position)
 		{
 			SetData(data);
 			IsActive = true;
+			_renderer.sortingOrder = -position.x;
 		}
 
 		public void DestroyStructure()
