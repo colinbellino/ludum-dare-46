@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17012bd6ad0508479ab595ff1e10005, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier:
+  AllLevels:
+  - {fileID: 11400000, guid: 1420f1400f4984d0eb96cba5899763b1, type: 2}
+  - {fileID: 11400000, guid: 1fd544d1b9dfa4fed947167a4d40a667, type: 2}
+  - {fileID: 11400000, guid: 82407006c246345c885019d0ab9a21a3, type: 2}
+  - {fileID: 11400000, guid: 630f7ebe9e0fc437d8d1059fbe83579a, type: 2}
+  - {fileID: 11400000, guid: 8c09a5e3f3c9a4106905b2405dd2c4c9, type: 2}
+  - {fileID: 11400000, guid: 20358591d5e744a9683a2d925b8a1987, type: 2}
+  - {fileID: 11400000, guid: 2446be8ecc24c47c5a45c05a37a360db, type: 2}
+  - {fileID: 11400000, guid: f0ed7dafb1cde447ea2fe8fb67861c03, type: 2}
+  - {fileID: 11400000, guid: 8541dc2e4ea0e8c4ebb515f4a972ad9b, type: 2}
+  AllTerrains:
+  - {fileID: 11400000, guid: c6a4b08ce07bc0d42ab8e696bb499c96, type: 2}
+  - {fileID: 11400000, guid: 2e3e3bdbc6ef2b44192e6776dc36c74e, type: 2}
+  AllStructures:
+  - {fileID: 11400000, guid: b56fa7d2ca2106248aa14ebcb1f8ecd0, type: 2}
+  - {fileID: 11400000, guid: 1d287cedbe0b90c48b966489c79ebfad, type: 2}
+  - {fileID: 11400000, guid: 8d9df5eb45008414aaa2c3dac3e7c6cb, type: 2}
+  - {fileID: 11400000, guid: 867a09169b23a3c4ea4758524ac9e5b3, type: 2}
+  CellPrefab: {fileID: 8184246195814092991, guid: 9672e90fc3a9b074ab4c481009f7af45,
+    type: 3}
+  BonfireAnimatorPrefab: {fileID: 2848810170268902540, guid: 57e735d2efef30544853a65f155a7182,
+    type: 3}
