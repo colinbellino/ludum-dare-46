@@ -22,6 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2446be8ecc24c47c5a45c05a37a360db, type: 2}
   - {fileID: 11400000, guid: f0ed7dafb1cde447ea2fe8fb67861c03, type: 2}
   - {fileID: 11400000, guid: 8541dc2e4ea0e8c4ebb515f4a972ad9b, type: 2}
+  - {fileID: 11400000, guid: 9db879ca35f51484dbac87fce2a6895a, type: 2}
   AllTerrains:
   - {fileID: 11400000, guid: c6a4b08ce07bc0d42ab8e696bb499c96, type: 2}
   - {fileID: 11400000, guid: 2e3e3bdbc6ef2b44192e6776dc36c74e, type: 2}
