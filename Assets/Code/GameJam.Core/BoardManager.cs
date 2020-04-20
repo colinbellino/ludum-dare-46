@@ -48,7 +48,7 @@ namespace GameJam.Core
 		public void SelectStructure(int id)
 		{
 			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == id);
-			if (_structuresAvailable[data] <= 1)
+			if (_structuresAvailable[data] <= 0)
 			{
 				Debug.LogWarning($"You can't select \"{data.Name}\" DOOD.");
 				return;
