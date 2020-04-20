@@ -54,6 +54,7 @@ namespace GameJam.Core
 						_highlightedCell.Position.x,
 						0f
 					);
+					_marker.color = _highlightedCell?.HasComponent<IndestructibleFlag>() == true ? Color.red : Color.blue;
 					_marker.sortingOrder = _highlightedCell.SortingOrder - 1;
 				}
 				else
