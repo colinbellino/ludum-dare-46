@@ -14,6 +14,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private List<Level> _levelsList;
 		[SerializeField] [Required] private AudioSource _audioSource;
 		[SerializeField] [Required] private AudioClip _cantPlaceClip;
+		[SerializeField] [Required] private AudioClip _placeClip;
 
 		// Runtime
 		private EventSystem _eventSystem;
@@ -82,6 +83,10 @@ namespace GameJam.Core
 				if (cantPlaceCell)
 				{
 					_audioSource.PlayOneShot(_cantPlaceClip);
+				}
+				else
+				{
+					_audioSource.PlayOneShot(_placeClip);
 				}
 			}
 

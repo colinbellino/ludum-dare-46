@@ -96,6 +96,7 @@ namespace GameJam.Core
 					.Permit(Triggers.ShowTitle, States.MainMenu)
 					.OnEntry(() =>
 					{
+						_sounds.PlayWinClip();
 						_boardManager.NextLevelIndex();
 						_gameOverMenu.SetActive(true);
 					})

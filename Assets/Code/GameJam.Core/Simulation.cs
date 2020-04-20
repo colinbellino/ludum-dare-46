@@ -75,7 +75,7 @@ namespace GameJam.Core
 
 				if (_leftToBurnCell.Count == 0)
 				{
-					_sounds.PlayFireExtinguishSound();
+					_sounds.PlayLooseClip();
 					GameEvents.LoseGame();
 					yield break;
 				}

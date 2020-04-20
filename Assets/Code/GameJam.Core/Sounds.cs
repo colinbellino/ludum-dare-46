@@ -7,7 +7,9 @@ namespace GameJam.Core
 	{
 		[SerializeField] [Required] private AudioSource _audioSourceFireBackground;
 		[SerializeField] [Required] private AudioSource _audioSourceFireIgnite;
-		[SerializeField] [Required] private AudioSource _audioSourceFireExtinguish;
+		[SerializeField] [Required] private AudioClip _looseClip;
+		[SerializeField] [Required] private AudioClip _winClip;
+		[SerializeField] [Required] private AudioClip _structureIgniteClip;
 
 		public void PlaySimulationMusic()
 		{
@@ -21,12 +23,17 @@ namespace GameJam.Core
 
 		public void PlayFireIgniteSound()
 		{
-			_audioSourceFireIgnite.Play();
+			_audioSourceFireIgnite.PlayOneShot(_structureIgniteClip);
 		}
 
-		public void PlayFireExtinguishSound()
+		public void PlayLooseClip()
 		{
-			_audioSourceFireExtinguish.Play();
+			_audioSourceFireIgnite.PlayOneShot(_looseClip);
+		}
+
+		public void PlayWinClip()
+		{
+			_audioSourceFireIgnite.PlayOneShot(_winClip);
 		}
 	}
 }
