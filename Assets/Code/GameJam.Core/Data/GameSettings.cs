@@ -10,7 +10,7 @@ using UnityEditor;
 
 namespace GameJam.Core
 {
-	[GlobalConfig("Assets/Resources", UseAsset = true)]
+	[GlobalConfig("Assets/Game/Resources", UseAsset = true)]
 	public class GameSettings : GlobalConfig<GameSettings>
 	{
 		// [ReadOnly]
