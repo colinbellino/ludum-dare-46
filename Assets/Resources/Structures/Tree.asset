@@ -25,3 +25,4 @@ MonoBehaviour:
   Name: Tree
   Sprite: {fileID: 6853316077166303748, guid: 30792725eb1c5554dbef3f605d898511, type: 3}
   IsExit: 0
+  Unburnable: 0
