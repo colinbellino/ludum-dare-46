@@ -94,6 +94,7 @@ namespace GameJam.Core
 					.Permit(Triggers.ShowTitle, States.MainMenu)
 					.OnEntry(() =>
 					{
+						_boardManager.NextLevelIndex();
 						_gameOverMenu.SetActive(true);
 					})
 					.OnExit(() =>
@@ -156,6 +157,7 @@ namespace GameJam.Core
 
 		private void MainMenuEnter()
 		{
+			_boardManager.ResetLevelIndex();
 			_mainMenuUi.SetActive(true);
 		}
 

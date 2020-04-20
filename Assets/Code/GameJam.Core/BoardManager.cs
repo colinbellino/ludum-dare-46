@@ -11,7 +11,7 @@ namespace GameJam.Core
 	public class BoardManager : MonoBehaviour
 	{
 		// Authoring
-		[SerializeField] [Required] private Level _currentLevel;
+		[SerializeField] [Required] private List<Level> _levelsList;
 
 		// Runtime
 		private EventSystem _eventSystem;
@@ -20,6 +20,8 @@ namespace GameJam.Core
 		private Dictionary<Structure, int> _structuresAvailable;
 		private CellComponent _highlightedCell;
 		private int _selectedStructureIndex;
+		private Level _currentLevel;
+		private int _currentLevelIndex = 0;
 
 		public event Action<Dictionary<Structure, int>> AvailableStructuresChanged;
 		public event Action<(int, int)> AvailableStructureQuantityChanged;
@@ -32,6 +34,7 @@ namespace GameJam.Core
 
 		public void Activate()
 		{
+			 _currentLevel = _levelsList[_currentLevelIndex % _levelsList.Count];
 			LoadLevel(_currentLevel);
 		}
 
@@ -121,6 +124,16 @@ namespace GameJam.Core
 				_structuresAvailable = level.Structures.ToDictionary(entry => entry.Key, entry => entry.Value); ;
 				AvailableStructuresChanged?.Invoke(_structuresAvailable);
 			}
+		}
+
+		public void NextLevelIndex()
+		{
+			_currentLevelIndex++;
+		}
+
+		public void ResetLevelIndex()
+		{
+			_currentLevelIndex = 0;
 		}
 
 		private void DestroyBoard()

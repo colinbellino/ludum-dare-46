@@ -607,7 +607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e617b79e7690c3a4985ad17d4aa160da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLevel: {fileID: 11400000, guid: efb68e4e4ad14834383f2b962ce86be6, type: 2}
+  _levelsList:
+  - {fileID: 11400000, guid: efb68e4e4ad14834383f2b962ce86be6, type: 2}
+  - {fileID: 11400000, guid: d2a9da3009f37411abac493d6527128a, type: 2}
 --- !u!222 &1200306721
 CanvasRenderer:
   m_ObjectHideFlags: 0
