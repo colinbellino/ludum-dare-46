@@ -8,6 +8,8 @@ namespace GameJam.Core
 	public class Level : SerializedScriptableObject
 	{
 		public Dictionary<Structure, int> Structures = new Dictionary<Structure, int>();
+
+		[DictionaryDrawerSettings(DisplayMode = DictionaryDisplayOptions.OneLine, IsReadOnly = true)]
 		public Dictionary<Vector2Int, Cell> Board = new Dictionary<Vector2Int, Cell> {
 			{ new Vector2Int(0, 0), new Cell { Terrain = 1, Structure = 0, Fire = 1 } },
 			{ new Vector2Int(0, 1), new Cell { Terrain = 1 } },
