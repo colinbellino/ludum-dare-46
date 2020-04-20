@@ -69,6 +69,7 @@ namespace GameJam.Core
 				_machine.Configure(States.GamePrepare)
 					.SubstateOf(States.Game)
 					.Permit(Triggers.StartSimulation, States.GameSimulate)
+					.PermitReentry(Triggers.RestartLevel)
 					.OnEntry(() =>
 					{
 						_prepareHud.SetActive(true);
@@ -154,6 +155,8 @@ namespace GameJam.Core
 
 		public void PlayTheGame() => _machine.Fire(Triggers.StartGame);
 
+		public void RestartLevel() => _machine.Fire(Triggers.RestartLevel);
+
 		public void StartSimulation() => _machine.Fire(Triggers.StartSimulation);
 
 		public void ShowCredits() => _machine.Fire(Triggers.ShowCredits);
@@ -214,6 +217,7 @@ namespace GameJam.Core
 			Lose,
 			ShowCredits,
 			QuitGame,
+			RestartLevel,
 		}
 	}
 }
