@@ -58,8 +58,9 @@ namespace GameJam.Core
 
 		public bool IsOnFire() => _fire.Amount > 0;
 
-		public void Burn()
+		public bool Burn()
 		{
+			var isBurnt = false;
 			_fire.Kindle();
 
 			// TODO: Get this from content data
@@ -69,7 +70,10 @@ namespace GameJam.Core
 				_fire.Extinguish();
 				DestroyStructure();
 				Burnt?.Invoke();
+				isBurnt = true;
 			}
+
+			return isBurnt;
 		}
 
 		public override string ToString()

@@ -73,6 +73,7 @@ namespace GameJam.Core
 
 				if (_processedCells.Count == 0)
 				{
+					_sounds.PlayFireExtinguishSound();
 					GameEvents.LoseGame();
 					yield break;
 				}
@@ -90,8 +91,11 @@ namespace GameJam.Core
 				return;
 			}
 
-			cell.Burn();
-			_processedCells.Add(cell);
+			var isBurnt = cell.Burn();
+			if (!isBurnt)
+			{
+				_processedCells.Add(cell);
+			}
 		}
 	}
 }
