@@ -12,6 +12,8 @@ namespace GameJam.Core
 	{
 		// Authoring
 		[SerializeField] [Required] private List<Level> _levelsList;
+		[SerializeField] [Required] private AudioSource _audioSource;
+		[SerializeField] [Required] private AudioClip _cantPlaceClip;
 
 		// Runtime
 		private EventSystem _eventSystem;
@@ -77,9 +79,9 @@ namespace GameJam.Core
 		{
 			if (Mouse.current.leftButton.wasPressedThisFrame)
 			{
-				if (_highlightedCell?.CanConstruct() == true)
+				if (PlaceSelectedStructure() == false)
 				{
-					PlaceSelectedStructure();
+					_audioSource.PlayOneShot(_cantPlaceClip);
 				}
 			}
 
@@ -101,19 +103,26 @@ namespace GameJam.Core
 			AvailableStructureQuantityChanged?.Invoke((data.Id, _structuresAvailable[data]));
 		}
 
-		private void PlaceSelectedStructure()
+		private bool PlaceSelectedStructure()
 		{
+			if (_highlightedCell?.CanConstruct() == false)
+			{
+				return false;
+			}
+
 			var data = GameSettings.Instance.AllStructures[_selectedStructureIndex];
 			if (_structuresAvailable[data] <= 0)
 			{
 				Debug.LogWarning($"You don't have any \"{data.Name}\" DOOD.");
-				return;
+				return false;
 			}
 
 			_highlightedCell.PlaceStructure(data);
 
 			_structuresAvailable[data] -= 1;
 			AvailableStructureQuantityChanged?.Invoke((data.Id, _structuresAvailable[data]));
+
+			return true;
 		}
 
 		private void LoadLevel(Level level)
