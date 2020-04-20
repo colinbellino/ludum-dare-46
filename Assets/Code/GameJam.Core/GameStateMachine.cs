@@ -119,9 +119,10 @@ namespace GameJam.Core
 
 				_machine.Configure(States.GameLose)
 					.SubstateOf(States.Game)
+					.Permit(Triggers.StartGame, States.GamePrepare)
 					.OnEntry(() =>
 					{
-						_machine.Fire(Triggers.ShowTitle);
+						_machine.Fire(Triggers.StartGame);
 					});
 			}
 
