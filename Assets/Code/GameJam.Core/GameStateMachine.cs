@@ -98,12 +98,19 @@ namespace GameJam.Core
 				_machine.Configure(States.GameWin)
 					.SubstateOf(States.Game)
 					.Permit(Triggers.StartGame, States.GamePrepare)
-					.Permit(Triggers.ShowTitle, States.MainMenu)
+					.Permit(Triggers.ShowCredits, States.Credits)
 					.OnEntry(() =>
 					{
 						_sounds.PlayWinClip();
-						_boardManager.NextLevelIndex();
-						_gameOverMenu.SetActive(true);
+						var isLastLevel = _boardManager.NextLevelIndex();
+						if (isLastLevel)
+						{
+							_machine.Fire(Triggers.ShowCredits);
+						}
+						else
+						{
+							_gameOverMenu.SetActive(true);
+						}
 					})
 					.OnExit(() =>
 					{
