@@ -23,6 +23,7 @@ namespace GameJam.Core
 		private const float _tickInterval = 0.5f;
 
 		private List<CellComponent> _processedCells;
+		private List<CellComponent> _leftToBurnCell;
 		private Coroutine _tickCoroutine;
 
 		public void StartSimulation()
@@ -40,6 +41,7 @@ namespace GameJam.Core
 			while (true)
 			{
 				_processedCells = new List<CellComponent>();
+				_leftToBurnCell = new List<CellComponent>();
 
 				var cellsToProcess = _board.Board.Values.ToList().Where(cell => cell.IsOnFire()).ToList();
 
@@ -71,7 +73,7 @@ namespace GameJam.Core
 					}
 				}
 
-				if (_processedCells.Count == 0)
+				if (_leftToBurnCell.Count == 0)
 				{
 					_sounds.PlayFireExtinguishSound();
 					GameEvents.LoseGame();
@@ -92,9 +94,10 @@ namespace GameJam.Core
 			}
 
 			var isBurnt = cell.Burn();
+			_processedCells.Add(cell);
 			if (!isBurnt)
 			{
-				_processedCells.Add(cell);
+				_leftToBurnCell.Add(cell);
 			}
 		}
 	}
