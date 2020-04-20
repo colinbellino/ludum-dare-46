@@ -6,6 +6,7 @@ namespace GameJam.Core
 {
 	public class CellComponent : MonoBehaviour
 	{
+		[SerializeField] [Required] private Animator _animator;
 		[SerializeField] [Required] private TerrainComponent _terrain;
 		[SerializeField] [Required] private StructureComponent _structure;
 		[SerializeField] [Required] private FireComponent _fire;
@@ -31,6 +32,7 @@ namespace GameJam.Core
 			{
 				var structure = GameSettings.Instance.AllStructures.Find(t => t.Id == data.Structure);
 				_structure.Initialize(structure, position);
+				_animator.Play("Has Structure");
 			}
 
 			_fire.Initialize(data.Fire);
@@ -38,9 +40,17 @@ namespace GameJam.Core
 
 		public bool HasStructure() => _structure.IsActive;
 
-		public void PlaceStructure(Structure structure) => _structure.PlaceStructure(structure, Position);
+		public void PlaceStructure(Structure structure)
+		{
+			_animator.SetTrigger("PlaceStructure");
+			_structure.PlaceStructure(structure, Position);
+		}
 
-		public void DestroyStructure() => _structure.DestroyStructure();
+		public void DestroyStructure()
+		{
+			_animator.SetTrigger("DestroyStructure");
+			_structure.DestroyStructure();
+		}
 
 		public bool CanBurn() => HasStructure();
 

@@ -49,7 +49,7 @@ namespace GameJam.Core
 			}
 			else
 			{
-				_renderer.sprite = null;
+				// _renderer.sprite = null;
 			}
 		}
 	}
