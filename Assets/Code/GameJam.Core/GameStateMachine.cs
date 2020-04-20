@@ -15,6 +15,7 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _backToMenuButton;
 		[SerializeField] [Required] private GameObject _gameOverMenu;
 		[SerializeField] [Required] private GameObject _creditsPage;
+		[SerializeField] [Required] private CameraRig _cameraRig;
 
 		private StateMachine<States, Triggers> _machine;
 
@@ -49,12 +50,16 @@ namespace GameJam.Core
 					GameEvents.GameWon += Win;
 					GameEvents.GameLost += Lose;
 
+					_cameraRig.MoveToBoard();
+
 					_backToMenuButton.SetActive(true);
 				})
 				.OnExit(() =>
 				{
 					GameEvents.GameWon -= Win;
 					GameEvents.GameLost -= Lose;
+
+					_cameraRig.MoveToTitle();
 
 					_boardManager.Deactivate();
 					_backToMenuButton.SetActive(false);

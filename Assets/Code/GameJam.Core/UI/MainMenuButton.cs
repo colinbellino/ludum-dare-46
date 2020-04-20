@@ -12,14 +12,14 @@ namespace GameJam.Core
 		{
 			_highlight.SetActive(true);
 
-			var position = _highlight.transform.position;
-			position.y = transform.position.y;
-			_highlight.transform.position = position;
+			// var position = _highlight.transform.position;
+			// position.y = transform.position.y;
+			// _highlight.transform.position = position;
 		}
 
 		public void OnPointerExit(PointerEventData eventData)
 		{
-			// _highlight.SetActive(false);
+			_highlight.SetActive(false);
 		}
 	}
 }
