@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllLevels:
   - {fileID: 11400000, guid: efb68e4e4ad14834383f2b962ce86be6, type: 2}
+  - {fileID: 11400000, guid: 630f7ebe9e0fc437d8d1059fbe83579a, type: 2}
+  - {fileID: 11400000, guid: 20358591d5e744a9683a2d925b8a1987, type: 2}
+  - {fileID: 11400000, guid: 8c09a5e3f3c9a4106905b2405dd2c4c9, type: 2}
   - {fileID: 11400000, guid: 1420f1400f4984d0eb96cba5899763b1, type: 2}
   - {fileID: 11400000, guid: 1fd544d1b9dfa4fed947167a4d40a667, type: 2}
+  - {fileID: 11400000, guid: 82407006c246345c885019d0ab9a21a3, type: 2}
   AllTerrains:
   - {fileID: 11400000, guid: c6a4b08ce07bc0d42ab8e696bb499c96, type: 2}
   AllStructures:
@@ -24,4 +28,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d9df5eb45008414aaa2c3dac3e7c6cb, type: 2}
   - {fileID: 11400000, guid: 867a09169b23a3c4ea4758524ac9e5b3, type: 2}
   CellPrefab: {fileID: 8184246195814092991, guid: 9672e90fc3a9b074ab4c481009f7af45,
+    type: 3}
+  FireAnimator: {fileID: 2848810170268902540, guid: c7b9d05b7371ea54d8555c61b8ef028c,
     type: 3}
