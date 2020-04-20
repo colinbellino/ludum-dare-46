@@ -1369,8 +1369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfcd9e26e9764069b86bf2ebe1e5f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorTexture: {fileID: -8328923581568760697, guid: a3da788b53c5c4e3a9985ac96b5632e5,
-    type: 3}
 --- !u!4 &1364099238
 Transform:
   m_ObjectHideFlags: 0

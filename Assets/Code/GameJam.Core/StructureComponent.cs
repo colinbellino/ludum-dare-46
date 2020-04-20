@@ -17,6 +17,7 @@ namespace GameJam.Core
 			if (data.IsExit)
 			{
 				var exit = gameObject.AddComponent<ExitFlag>();
+				gameObject.AddComponent<IndestructibleOnFireFlag>();
 			}
 
 			if (data.Unburnable)

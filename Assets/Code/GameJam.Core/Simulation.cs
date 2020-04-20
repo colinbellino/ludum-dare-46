@@ -65,11 +65,11 @@ namespace GameJam.Core
 							TryToBurn(neighbour);
 						}
 
-						if (neighbour.HasComponent<ExitFlag>())
-						{
-							GameEvents.WinGame();
-							yield break;
-						}
+						// if (neighbour.HasComponent<ExitFlag>())
+						// {
+						// 	GameEvents.WinGame();
+						// 	yield break;
+						// }
 					}
 				}
 
@@ -77,6 +77,12 @@ namespace GameJam.Core
 				{
 					_sounds.PlayLooseClip();
 					GameEvents.LoseGame();
+					yield break;
+				}
+
+				if (_leftToBurnCell.Count == 1 && _leftToBurnCell[0].HasComponent<ExitFlag>())
+				{
+					GameEvents.WinGame();
 					yield break;
 				}
 

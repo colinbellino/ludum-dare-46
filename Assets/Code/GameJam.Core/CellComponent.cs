@@ -52,7 +52,7 @@ namespace GameJam.Core
 			_structure.DestroyStructure();
 		}
 
-		public bool CanBurn() => HasStructure();
+		public bool CanBurn() => HasStructure() && HasComponent<UnburnableFlag>() == false;
 
 		// 🎩
 		public bool CanConstruct()
@@ -64,6 +64,11 @@ namespace GameJam.Core
 		public bool CanDestroy()
 		{
 			return HasComponent<IndestructibleFlag>() == false && _structure.IsActive == true;
+		}
+
+		private bool CantBurnt()
+		{
+			return HasComponent<IndestructibleOnFireFlag>() == true;
 		}
 
 		public bool IsOnFire() => _fire.Amount > 0;
@@ -80,6 +85,11 @@ namespace GameJam.Core
 			// TODO: Get this from content data
 			var limit = 2;
 			if (_fire.Amount <= limit)
+			{
+				return false;
+			}
+
+			if (CantBurnt())
 			{
 				return false;
 			}
