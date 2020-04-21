@@ -60,7 +60,7 @@ namespace GameJam.Core
 		// 🎩
 		public bool CanConstruct()
 		{
-			return _structure.IsActive == false;
+			return _structure.IsActive == false && _terrain.Id != 99;
 		}
 
 		// 🤠
