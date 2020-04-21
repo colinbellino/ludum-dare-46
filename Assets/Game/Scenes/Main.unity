@@ -10388,6 +10388,7 @@ MonoBehaviour:
   _gameOverMenu: {fileID: 3096564340270869246}
   _creditsPage: {fileID: 1493119677}
   _cameraRig: {fileID: 810919574}
+  GameSettings: {fileID: 11400000, guid: beef042a908722d48950de64983401bf, type: 2}
 --- !u!114 &1923228898
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ namespace GameJam.Core
 		[SerializeField] [Required] private GameObject _creditsPage;
 		[SerializeField] [Required] private CameraRig _cameraRig;
 
+		public GameSettings GameSettings;
+
 		private StateMachine<States, Triggers> _machine;
 
 		[ShowInInspector] [ReadOnly] public string StateName => _machine?.State.ToString();

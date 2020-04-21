@@ -34,7 +34,7 @@ namespace GameJam.Core
 
 		private void Awake()
 		{
-			_levels = GameSettings.Instance.AllLevels;
+			_levels = FindObjectOfType<GameStateMachine>().GameSettings.AllLevels;
 			_eventSystem = EventSystem.current;
 			_camera = Camera.main;
 		}
@@ -66,6 +66,9 @@ namespace GameJam.Core
 
 		public void Activate()
 		{
+			UnityEngine.Debug.Log("_levels); " + _levels);
+			UnityEngine.Debug.Log("_levels.Count); " + _levels.Count);
+			UnityEngine.Debug.Log("_currentLevelIndex); " + _currentLevelIndex);
 			_currentLevel = _levels[_currentLevelIndex % _levels.Count];
 			LoadLevel(_currentLevel);
 			_interactive = true;
@@ -85,8 +88,8 @@ namespace GameJam.Core
 
 		public void SelectStructure(int id)
 		{
-			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == id);
-			_selectedStructureIndex = GameSettings.Instance.AllStructures.FindIndex(structure => structure.Id == id);
+			var data = FindObjectOfType<GameStateMachine>().GameSettings.AllStructures.Find(structure => structure.Id == id);
+			_selectedStructureIndex = FindObjectOfType<GameStateMachine>().GameSettings.AllStructures.FindIndex(structure => structure.Id == id);
 		}
 
 		private void HandleInputs()
@@ -126,7 +129,7 @@ namespace GameJam.Core
 
 		private void DestroyHightlightedStructure()
 		{
-			var data = GameSettings.Instance.AllStructures.Find(structure => structure.Id == _highlightedCell.StructureId);
+			var data = FindObjectOfType<GameStateMachine>().GameSettings.AllStructures.Find(structure => structure.Id == _highlightedCell.StructureId);
 			_highlightedCell.DestroyStructure();
 
 			_structuresAvailable[data] += 1;
@@ -140,7 +143,7 @@ namespace GameJam.Core
 				return false;
 			}
 
-			var data = GameSettings.Instance.AllStructures[_selectedStructureIndex];
+			var data = FindObjectOfType<GameStateMachine>().GameSettings.AllStructures[_selectedStructureIndex];
 			if (_structuresAvailable[data] <= 0)
 			{
 				Debug.LogWarning($"You don't have any \"{data.Name}\" DOOD.");
@@ -200,7 +203,7 @@ namespace GameJam.Core
 		{
 			var localPosition = new Vector3(position.y, position.x, 0f);
 
-			var cell = Instantiate(GameSettings.Instance.CellPrefab, transform);
+			var cell = Instantiate(FindObjectOfType<GameStateMachine>().GameSettings.CellPrefab, transform);
 			cell.transform.localPosition = localPosition;
 			cell.name = $"Cell [{position.x},{position.y}]";
 			cell.Initialize(position, data);

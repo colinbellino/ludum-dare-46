@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a17012bd6ad0508479ab595ff1e10005, type: 3}
   m_Name: GameSettings
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   AllLevels:
   - {fileID: 11400000, guid: 1420f1400f4984d0eb96cba5899763b1, type: 2}
   - {fileID: 11400000, guid: 1fd544d1b9dfa4fed947167a4d40a667, type: 2}

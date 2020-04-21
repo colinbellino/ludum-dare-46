@@ -10,8 +10,8 @@ using UnityEditor;
 
 namespace GameJam.Core
 {
-	[GlobalConfig("Assets/Game/Resources", UseAsset = true)]
-	public class GameSettings : GlobalConfig<GameSettings>
+	// [GlobalConfig("Assets/Game/Resources", UseAsset = false)]
+	public class GameSettings : ScriptableObject
 	{
 		// [ReadOnly]
 		[ListDrawerSettings(Expanded = true)]

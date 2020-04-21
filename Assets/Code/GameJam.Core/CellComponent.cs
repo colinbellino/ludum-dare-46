@@ -27,13 +27,13 @@ namespace GameJam.Core
 
 			if (data.Terrain > -1)
 			{
-				var terrain = GameSettings.Instance.AllTerrains.Find(t => t.Id == data.Terrain);
+				var terrain = FindObjectOfType<GameStateMachine>().GameSettings.AllTerrains.Find(t => t.Id == data.Terrain);
 				_terrain.Initialize(terrain);
 			}
 
 			if (data.Structure > -1)
 			{
-				var structure = GameSettings.Instance.AllStructures.Find(t => t.Id == data.Structure);
+				var structure = FindObjectOfType<GameStateMachine>().GameSettings.AllStructures.Find(t => t.Id == data.Structure);
 				_structure.Initialize(structure, position);
 				_animator.Play("Has Structure");
 			}
