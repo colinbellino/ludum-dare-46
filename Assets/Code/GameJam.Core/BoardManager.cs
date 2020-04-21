@@ -66,9 +66,6 @@ namespace GameJam.Core
 
 		public void Activate()
 		{
-			UnityEngine.Debug.Log("_levels); " + _levels);
-			UnityEngine.Debug.Log("_levels.Count); " + _levels.Count);
-			UnityEngine.Debug.Log("_currentLevelIndex); " + _currentLevelIndex);
 			_currentLevel = _levels[_currentLevelIndex % _levels.Count];
 			LoadLevel(_currentLevel);
 			_interactive = true;
