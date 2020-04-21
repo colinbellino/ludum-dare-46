@@ -96,7 +96,7 @@ namespace GameJam.Core
 				return;
 			}
 
-			if (Mouse.current.leftButton.wasPressedThisFrame)
+			if (Mouse.current.leftButton.wasPressedThisFrame || Input.touchCount > 0)
 			{
 				var cantPlaceCell = PlaceSelectedStructure() == false;
 				if (cantPlaceCell)
@@ -108,8 +108,7 @@ namespace GameJam.Core
 					_audioSource.PlayOneShot(_placeClip);
 				}
 			}
-
-			if (Mouse.current.rightButton.wasPressedThisFrame)
+			else if (Mouse.current.rightButton.wasPressedThisFrame)
 			{
 				var canDestroyCell = _highlightedCell?.CanDestroy() == true;
 				if (canDestroyCell)
@@ -216,20 +215,31 @@ namespace GameJam.Core
 
 		private CellComponent GetCellUnderMouseCursor()
 		{
-			var mousePosition = Mouse.current.position.ReadValue();
-
-			var ray = _camera.ScreenPointToRay(mousePosition);
-			if (!Physics.Raycast(ray, out var hit, maxDistance: 100f))
+			if (Input.touchCount > 0 && Input.touches[0].phase == UnityEngine.TouchPhase.Began)
 			{
-				return null;
+				var ray = _camera.ScreenPointToRay(Input.GetTouch(0).position);
+				if (Physics.Raycast(ray, out var hit, maxDistance: 100f))
+				{
+					return hit.transform.GetComponent<CellComponent>();
+				}
 			}
 
-			if (_eventSystem.IsPointerOverGameObject())
 			{
-				return null;
-			}
+				var mousePosition = Mouse.current.position.ReadValue();
 
-			return hit.transform.GetComponent<CellComponent>();
+				var ray = _camera.ScreenPointToRay(mousePosition);
+				if (!Physics.Raycast(ray, out var hit, maxDistance: 100f))
+				{
+					return null;
+				}
+
+				if (_eventSystem.IsPointerOverGameObject())
+				{
+					return null;
+				}
+
+				return hit.transform.GetComponent<CellComponent>();
+			}
 		}
 	}
 }
