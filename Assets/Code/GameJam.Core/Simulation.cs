@@ -73,14 +73,20 @@ namespace GameJam.Core
 					}
 				}
 
-				if (_leftToBurnCell.Count == 0)
+				var numberOfBonfire = _board.Board.Values.ToList().Where(cell => cell.HasComponent<ExitFlag>()).ToList().Count;
+				var numberOfBonfireLit =
+					_leftToBurnCell.Where(cell => cell.HasComponent<ExitFlag>()).ToList().Count;
+
+				if (_leftToBurnCell.Count == 0 || (numberOfBonfireLit == _leftToBurnCell.Count && numberOfBonfireLit != numberOfBonfire))
 				{
 					_sounds.PlayLooseClip();
 					GameEvents.LoseGame();
 					yield break;
 				}
 
-				if (_leftToBurnCell.Where(cell => cell.HasComponent<ExitFlag>() == true).ToList().Count == _leftToBurnCell.Count)
+
+
+				if (numberOfBonfireLit == _leftToBurnCell.Count && numberOfBonfireLit == numberOfBonfire)
 				{
 					GameEvents.WinGame();
 					yield break;
