@@ -1,4 +1,8 @@
-# Ludum Dare 46
+# Ludum Dare 46 (Bonfire)
+
+A game built in 3 days for the Ludum Dare Game Jam. It's really short and easy, but we hope you have fun!
+
+Play at: https://colinbellino.itch.io/bonfire
 
 ## Installing dependencies
 
@@ -15,3 +19,5 @@ This project depends on several assets that need to be bought and downloaded sep
 ## Setting up dependencies
 
 - Rainbow Folders: in Project Settings > Borodar > Rainbow Folders, set the folder location to `Assets/Plugins`.
+
+![BtCCVz](https://user-images.githubusercontent.com/622180/128102304-a7c51aad-afa4-4258-8c9a-bfbc8f341172.png)
